@@ -722,8 +722,8 @@
       "name": null,
       "values": {
         "featured_offer": 0,
-        "internal_name": "Unified Marketing + Sales Whitepaper",
-        "name": "Unified Marketing + Sales Whitepaper",
+        "internal_name": "SOHS Marketing + Sales Whitepaper",
+        "name": "SOHS Marketing + Sales Whitepaper",
         "description": "This guide seeks to show you how to break the barrier between your marketing and sales departments. Your team will be stronger as a result and your company will see the effects with a higher return on your marketing investment.",
         "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
         "cover_image": {
