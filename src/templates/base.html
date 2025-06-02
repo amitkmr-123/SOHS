@@ -19,9 +19,9 @@ isAvailableForNewContent: false
 
 </head>
 <body class="{{ builtin_body_classes }} {% if request.full_url is string_containing "/author/" %} author-listing {% endif %}">
-    {% block header %}
-        
-    {% endblock header %}
+   {% block header %}
+      {% global_partial path='././partials/u4m-header.html' %}
+      {% endblock header %}
 
     {% block body %}
     {% endblock body %}

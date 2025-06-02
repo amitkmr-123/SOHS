@@ -1,0 +1,44 @@
+<!--
+templateType: global_partial
+label: Footer
+-->
+
+<div class="ftr">
+	<div class="innerCnt">
+		<div class="page-center">
+			<div class="flex-row">
+				<div class="custom_logo">	
+					{% module "ftr_logo" path="@hubspot/logo",  label="Logo",  img={ src={{ get_asset_url('/SOHS/templates/images/Footer Logo.png') }}, width=216, override_inherited_src=true, alt="Logo"  }, link="/"  %}
+				</div>
+				<div class="menu">
+					{% module "menu" path="@hubspot/menu" , id=190823897484 , label="Menu",flyouts=false%}
+				</div>
+				<div class="richTextCnt">
+					<div class="left">
+						{% module_block module "copy_text" path="@hubspot/rich_text" label="Copyright Content" %}
+						{% module_attribute "html" %}
+						<p>
+							The State of HubSpot is an original production of New Breed. All content, including but not limited to written materials, design elements, data visualizations, audio, video, and associated media, is the intellectual property of New Breed, unless otherwise attributed.
+						</p>
+						<p>
+							<strong>
+								© {{year}} New Breed. All rights reserved.	
+							</strong>					
+						</p>
+						{% end_module_attribute %}
+						{% end_module_block %}
+					</div>
+					<div class="right">
+						{% module_block module "right" path="@hubspot/rich_text" label="Right Content" %}
+						{% module_attribute "html" %}
+						<p>
+							HubSpot and all associated trademarks are the property of HubSpot, Inc. and are used in this publication for editorial and informational purposes only. New Breed is an independent HubSpot Solutions Partner and is not endorsed by or acting on behalf of HubSpot.
+						</p>
+						{% end_module_attribute %}
+						{% end_module_block %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 

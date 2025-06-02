@@ -6,84 +6,102 @@
   margin-bottom: 20rem;
   line-height: 1;
   margin-top: 0;
+
   @include tablet {
     font-size: 48rem;
   }
+
   @include phone {
     font-size: 38rem;
     margin-bottom: 20rem;
   }
 }
+
 @mixin h2 {
   font-family: $font1;
   font-size: 72rem;
   font-weight: 900;
   margin-bottom: 20rem;
   line-height: 1;
+
   @include tablet {
     font-size: 48rem;
   }
+
   @include phone {
     font-size: 38rem;
     margin-bottom: 20rem;
   }
 }
+
 @mixin h3 {
   font-family: $font1;
   font-size: 48rem;
   font-weight: 900;
   margin-bottom: 20rem;
   line-height: 1;
+
   @include tablet {
     font-size: 32rem;
   }
+
   @include phone {
     font-size: 28rem;
     margin-bottom: 20rem;
   }
 }
+
 @mixin h4 {
   font-family: $font1;
   font-size: 32rem;
   font-weight: 900;
   margin-bottom: 20rem;
   line-height: 1;
+
   @include tablet {
     font-size: 28rem;
   }
+
   @include phone {
     font-size: 24rem;
     margin-bottom: 20rem;
   }
 }
+
 @mixin h5 {
   font-family: $font1;
   font-size: 30rem;
   font-weight: 900;
   margin-bottom: 20rem;
   line-height: 1;
+
   @include tablet {
     font-size: 24rem;
   }
+
   @include phone {
     font-size: 20rem;
     margin-bottom: 20rem;
   }
 }
+
 @mixin h6 {
   font-family: $font1;
   font-size: 24rem;
   font-weight: 900;
   margin-bottom: 20rem;
   line-height: 1;
+
   @include tablet {
     font-size: 20rem;
   }
+
   @include phone {
     font-size: 18rem;
     margin-bottom: 20rem;
   }
 }
+
 //body styles
 @mixin b1 {
   font-family: $font1;
@@ -91,59 +109,71 @@
   line-height: 1.4;
   letter-spacing: 0.25rem;
   margin-bottom: 20rem;
+
   @include phone {
     font-size: 17rem;
   }
 }
+
 @mixin b2 {
   font-family: $font1;
   font-size: 18rem;
   line-height: 1.38;
   margin-bottom: 20rem;
+
   @include phone {
     font-size: 16rem;
   }
 }
+
 @mixin b3 {
   font-family: $font1;
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
   margin-bottom: 20rem;
+
   @include phone {
     font-size: 15rem;
   }
 }
+
 @mixin b4 {
   font-family: $font1;
   font-size: 14rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
   margin-bottom: 20rem;
+
   @include phone {
     font-size: 14rem;
   }
 }
+
 @mixin b5 {
   font-family: $font1;
   font-size: 13rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
   margin-bottom: 20rem;
+
   @include phone {
     font-size: 13rem;
   }
 }
+
 @mixin b6 {
   font-family: $font1;
   font-size: 12rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
   margin-bottom: 10rem;
+
   @include phone {
     font-size: 12rem;
   }
 }
+
 @mixin blockquote {
   font-family: $font1;
   font-size: 72rem;
@@ -153,10 +183,12 @@
   color: $action1;
   display: block;
   max-width: 90%;
+
   @include phone {
     font-size: 30rem;
   }
 }
+
 @mixin eyebrow {
   font-family: $font1;
   font-size: 24rem;
@@ -165,4 +197,12 @@
   display: block;
   margin-bottom: 10rem;
   color: $lightturquoise;
+}
+
+@mixin size12 {
+  font-size: 12px;
+}
+
+@mixin size14 {
+  font-size: 14px;
 }
