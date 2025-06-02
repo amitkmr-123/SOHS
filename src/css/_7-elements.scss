@@ -22,7 +22,7 @@ body {
   line-height: $baseLineHeight;
   color: $black;
   font-weight: normal;
-  margin-top: 78rem;
+  background-color: $purple;
 
   &.hide-header {
     margin-top: 0;
@@ -417,7 +417,7 @@ code {
   border-radius: 0;
 }
 
-pre > code {
+pre>code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -497,6 +497,7 @@ section[class*="u4m-"] {
     background-position: center;
     mix-blend-mode: overlay;
   }
+
   &.grad {
     z-index: 2;
   }
@@ -511,7 +512,7 @@ section[class*="u4m-"] {
   position: relative;
 }
 
-.bg_overlay ~ *:not(.bg_overlay) {
+.bg_overlay~*:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }
@@ -539,6 +540,7 @@ section[class*="u4m-"] {
     gap: 20px;
     align-items: center;
     margin-top: 30rem;
+
     .btn_item {
       a {
         margin: 0;
@@ -548,6 +550,7 @@ section[class*="u4m-"] {
 
   .intro_desc {
     margin-bottom: 0px;
+
     p:last-child {
       margin: 0;
     }
@@ -606,8 +609,10 @@ section[class*="u4m-"] {
   .arrow-link:not(:hover) {
     color: $white;
   }
+
   .hs-arrow-btn {
     color: inherit;
+
     &:hover {
       color: inherit;
     }
@@ -625,12 +630,15 @@ section[class*="u4m-"] {
 .purple_bg {
   background-color: $purple;
 }
+
 .lightblack_bg {
   background-color: $lightblack;
 }
+
 .Black_bg {
   background-color: $black;
 }
+
 .White_bg {
   background-color: $white;
 }
