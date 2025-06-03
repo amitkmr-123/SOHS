@@ -1,0 +1,115 @@
+{% set moduleName = 'u4m-content-grid' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+
+	<div class="flex_row {% if module.card_group|length > 2%}moreCards{% endif %}">
+
+		{% for item in module.card_group %}
+		{% set href = item.link.url.href %}
+		{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+		{% endif %}
+		<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+		<div class="card_item_inner ">
+			<div class="card_row">
+				{% if item.image.src %}
+				<div class="card_img" style="background-image: url({{ item.image.src }})">
+					<a
+						 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+						 href="{{ href }}" 
+						 {% else %}
+						 href="{{ href }}"
+						 {% endif %}
+						 {% if item.link.open_in_new_tab %}
+						 target="_blank"
+						 {% endif %}
+						 {% if item.link.rel %}
+						 rel="{{ item.link.rel }}"
+						 {% endif %}
+						 ></a>
+				</div>
+				{% endif %}
+
+				<div class="card_body">
+					<div class="card_meta">
+						<div class="card_meta_tag">
+							{% if item.tag.select_icon_type %}
+							<span class="tag_icon ty{{item.tag.select_icon_type}}" {% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}style="color: {{ item.tag.icon_color.rgba }}"	{% endif %}>
+								{% if item.tag.select_icon_type == "image" and item.tag.image.src %}
+								<img src="{{ item.tag.image.src }}" alt="{{ item.tag.image.alt }}">
+								{% endif %}
+
+								{% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}
+								{% icon
+										name="{{ item.tag.icon_field.name }}"
+										style="{{ item.tag.icon_field.type }}"
+										unicode="{{ item.tag.icon_field.unicode }}"
+										icon_set="{{ item.tag.icon_field.icon_set }}"
+									%}
+								{% endif %}
+							</span>
+							{% endif %}
+
+							<span class="tag_name">
+								{{ item.tag.tag_name }}
+							</span>
+						</div>
+
+						{% if item.mark_podcast %}
+						<div class="podcast_mmark">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+									<g clip-path="url(#clip0_2001_985)">
+										<path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+									<defs>
+										<clipPath id="clip0_2001_985">
+											<rect width="12" height="12" fill="white"/>
+										</clipPath>
+									</defs>
+								</svg>
+							</span>
+						</div>
+						{% endif %}
+					</div>
+
+					<h4 class="title">
+						<a {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+							 href="{{ href }}" 
+							 {% else %}
+							 href="{{ href }}"
+							 {% endif %}
+							 {% if item.link.open_in_new_tab %}
+							 target="_blank"
+							 {% endif %}
+							 {% if item.link.rel %}
+							 rel="{{ item.link.rel }}"
+							 {% endif %}
+							 >
+							{{ item.title }}
+						</a>
+					</h4>
+
+					<div class="description">
+						{{ item.description }}
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		{% endfor %}
+		{# #}
+	</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
