@@ -5,14 +5,15 @@
 
 	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
 
-	<div class="flex_row {% if module.card_group|length > 2%}moreCards{% endif %}">
+<div class="cards_list_row">
+<div class="flex_row {% if module.card_group|length > 2%}moreCards{% endif %}">
 
-		{% for item in module.card_group %}
-		{% set href = item.link.url.href %}
-		{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
-		{% set href = "mailto:" + href %}
-		{% endif %}
-		<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+{% for item in module.card_group %}
+	{% set href = item.link.url.href %}
+	{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+	{% set href = "mailto:" + href %}
+	{% endif %}
+	<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
 		<div class="card_item_inner ">
 			<div class="card_row">
 				{% if item.image.src %}
@@ -44,11 +45,11 @@
 
 								{% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}
 								{% icon
-										name="{{ item.tag.icon_field.name }}"
-										style="{{ item.tag.icon_field.type }}"
-										unicode="{{ item.tag.icon_field.unicode }}"
-										icon_set="{{ item.tag.icon_field.icon_set }}"
-									%}
+									name="{{ item.tag.icon_field.name }}"
+									style="{{ item.tag.icon_field.type }}"
+									unicode="{{ item.tag.icon_field.unicode }}"
+									icon_set="{{ item.tag.icon_field.icon_set }}"
+								%}
 								{% endif %}
 							</span>
 							{% endif %}
@@ -92,16 +93,40 @@
 						</a>
 					</h4>
 
+					{% if item.include_description %}
 					<div class="description">
 						{{ item.description }}
 					</div>
+					{% endif %}
+
+
+					{% if item.include_authors %}
+					<div class="authors_wrap">
+						{% for item2 in item.author_group %}
+						<div class="auth_item">
+							{% if item2.image.src %}
+							<span class="auth_img">
+								<img src="{{ item2.image.src }}" alt="{{ item2.image.alt }}">
+							</span>
+							{% endif %}
+							{% if item2.auth_info %}
+							<span class="author_info">
+								{{ item2.auth_info }}
+							</span>
+							{% endif %}
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
 				</div>
 			</div>
 		</div>
-		</div>
-		{% endfor %}
-		{# #}
 	</div>
+	{% endfor %}
+{# #}
+</div>
+</div>
 
 </div>
 </section>

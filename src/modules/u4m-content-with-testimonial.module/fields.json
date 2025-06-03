@@ -342,6 +342,36 @@
     } ]
   }
 }, {
+  "id" : "71488070-009d-0ab8-5fb8-4d254997dc31",
+  "name" : "include_top_title",
+  "label" : "Include Top Title",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "c832e64f-c696-0d79-a6cf-565e899f8ff8",
+  "name" : "top_title",
+  "label" : "Top Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "include_top_title",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our Latest"
+}, {
   "id" : "db54579f-5091-9ef4-9d52-f83b6e04d727",
   "name" : "card_group",
   "label" : "Card Group",
@@ -963,6 +993,93 @@
     } ]
   } ]
 }, {
+  "id" : "16c7edde-63db-e86f-bc5b-ad42c9d63157",
+  "name" : "quote_box",
+  "label" : "Quote Box",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "da7e91e0-167f-8ab9-b6e2-35ffcaccbc5f",
+    "name" : "author_image",
+    "label" : "Author Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Avatar.png",
+      "alt" : "Avatar",
+      "loading" : "lazy",
+      "width" : 76,
+      "height" : 106,
+      "max_width" : 76,
+      "max_height" : 106
+    }
+  }, {
+    "id" : "9b021870-1a95-9a10-7b8a-a4763dd20664",
+    "name" : "quote",
+    "label" : "Quote",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here."
+  }, {
+    "id" : "5e23b7fb-7294-c185-45ac-7b42425c9122",
+    "name" : "auth_name",
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here."
+  }, {
+    "id" : "bcfac520-b43d-52b6-a1d0-d5b8b6534849",
+    "name" : "role",
+    "label" : "Role",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Role, company"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "author_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Avatar.png",
+      "alt" : "Avatar",
+      "loading" : "lazy",
+      "width" : 76,
+      "height" : 106,
+      "max_width" : 76,
+      "max_height" : 106
+    },
+    "quote" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
+    "auth_name" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
+    "role" : "Role, company"
+  }
+}, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
   "name" : "module_settings",
   "label" : "Module Settings",
@@ -1419,6 +1536,93 @@
       }
     }
   }, {
+    "id" : "94526414-6e07-3454-ae6a-24e0ecfd386e",
+    "name" : "quote_box_dark_theme",
+    "label" : "Quote Box Dark Theme",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "3150ba98-aaf4-9830-87ed-58221c960adf",
+    "name" : "quote_background_settings",
+    "label" : "Quote Box Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "36c066b0-9344-6295-1ccf-e7545c587d8a",
+      "name" : "select_color",
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "purple_bg", "Purple" ], [ "lightblack_bg", "Light Black" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "lightblack_bg"
+    }, {
+      "id" : "6d7db726-5550-008c-dd71-8a032b47e686",
+      "name" : "custom_color",
+      "label" : "Custom Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.select_color",
+        "controlling_value_regex" : "custom",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : null,
+        "opacity" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "select_color" : "lightblack_bg",
+      "custom_color" : {
+        "color" : null,
+        "opacity" : null
+      }
+    }
+  }, {
     "id" : "fc248331-90d9-cb7e-66f6-4b85de179aa9",
     "name" : "container_size",
     "label" : "Container Size",
@@ -1491,6 +1695,14 @@
         "loading" : "lazy"
       },
       "include_overlay" : false,
+      "custom_color" : {
+        "color" : null,
+        "opacity" : null
+      }
+    },
+    "quote_box_dark_theme" : true,
+    "quote_background_settings" : {
+      "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
         "opacity" : null

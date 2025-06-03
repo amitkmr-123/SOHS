@@ -417,7 +417,7 @@ code {
   border-radius: 0;
 }
 
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -512,7 +512,7 @@ section[class*="u4m-"] {
   position: relative;
 }
 
-.bg_overlay~*:not(.bg_overlay) {
+.bg_overlay ~ *:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }
@@ -641,4 +641,24 @@ section[class*="u4m-"] {
 
 .White_bg {
   background-color: $white;
+}
+
+.SunbeamYellow_bg {
+  background-color: $SunbeamYellow;
+}
+
+.MidGray_bg {
+  background-color: $MidGray;
+}
+
+.Ice_bg {
+  background-color: $ice;
+}
+
+.LavenderPurple_bg {
+  background-color: $LavenderPurple;
+}
+
+.cards_list_row {
+  @include contentCards;
 }
