@@ -1,0 +1,26 @@
+{% set moduleName = 'u4m-intro-section' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+
+
+</div>
+</section>
+
+
+
+
+{% require_css %}
+<style>
+	.u4m-intro-section.{{name}} .intro_content{
+		max-width:{{ module.module_settings.intro_content_container }}px ;
+	}
+	{% if module.module_settings.intro_content_title =="custom" %}
+	.u4m-intro-section.{{name}} .intro_content .intro_title{
+		color:{{ module.module_settings.color.rgba }};
+	}
+	{% endif %}
+</style>
+{% end_require_css %}

@@ -1,0 +1,23 @@
+@import "../../css/_module-imports";
+
+.u4m-hero {
+    .intro_content {
+        .eyebrow_text {
+            color: $SunbeamYellow;
+            font-weight: 800;
+            @include size12;
+            line-height: 1;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 12rem;
+        }
+
+        .intro_title {
+            margin-bottom: 12rem;
+        }
+
+        .intro_btn_wrap {
+            margin-top: 53rem;
+        }
+    }
+}
