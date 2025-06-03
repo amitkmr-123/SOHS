@@ -1039,12 +1039,12 @@
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
-    "placeholder" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
+    "placeholder" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
     "display_width" : null,
-    "default" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here."
+    "default" : "Firstname Lastname"
   }, {
     "id" : "bcfac520-b43d-52b6-a1d0-d5b8b6534849",
     "name" : "role",
@@ -1076,7 +1076,7 @@
       "max_height" : 106
     },
     "quote" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
-    "auth_name" : "An amazing quote from a thought leader that brings <b>life and proof</b> to everything we’re trying to say here.",
+    "auth_name" : "Firstname Lastname",
     "role" : "Role, company"
   }
 }, {
@@ -1664,7 +1664,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 1446
+    "default" : 1600
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -1709,6 +1709,6 @@
       }
     },
     "container_size" : "custom",
-    "custom_container_size" : 1446
+    "custom_container_size" : 1600
   }
 } ]

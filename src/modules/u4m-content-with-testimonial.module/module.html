@@ -5,6 +5,7 @@
 
 	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
 
+	<div class="main_row flex_row">
 
 	<div class="left_content_column">
 		{% if module.include_top_title %}
@@ -158,7 +159,7 @@
 					</span>
 					{% endif %}
 					<span class="author_info">
-						<span>- {{ module.quote_box.auth_name }}</span>
+						<span>— {{ module.quote_box.auth_name }}</span>
 						<span>{{ module.quote_box.role }}</span>
 					</span>
 				</div>
@@ -167,6 +168,8 @@
 		</div>		
 	</div>
 
+
+	</div>
 
 </div>
 </section>

@@ -3,6 +3,12 @@
 .u4m-content-grid {
   position: relative;
 
+  &.reverse-text {
+    .cards_list_row {
+      @include darkThemeStyle;
+    }
+  }
+
   // .cards_list_row {
   // }
 

@@ -588,34 +588,8 @@ section[class*="u4m-"] {
 }
 
 .reverse-text {
-  color: $white;
-
-  .themeStyle,
-  .bodystyle2,
-  .bodystyle1,
-  .bodystyle3,
-  .bodystyle4,
-  .bodystyle5,
-  .eyebrow_text,
-  .intro_desc,
-  .intro_title {
-    color: $white;
-  }
-
-  :is(h1, h2, h3, h4, h5, h6) {
-    color: $white;
-  }
-
-  .arrow-link:not(:hover) {
-    color: $white;
-  }
-
-  .hs-arrow-btn {
-    color: inherit;
-
-    &:hover {
-      color: inherit;
-    }
+  .intro_content {
+    @include darkThemeStyle;
   }
 }
 
