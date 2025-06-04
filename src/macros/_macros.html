@@ -44,9 +44,7 @@
 	<div class="btn_item">
 		{% if item.button_type == "std" %}
 		{% if item.button_style =="popup"%}
-		<a href="javascript:void(0)" data-id="popup_{{ name }} cmPopupTrigger" class="hs-button">
-			<span>{{ item.button_text }}</span> 
-		</a>
+		<a href="javascript:void(0)" data-id="popup_{{ name }}" class="cmPopupTrigger hs-button">{{ item.button_text }}</a>
 		{% else %}
 		{% set href = item.link.url.href %}
 		{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
@@ -65,7 +63,6 @@
 			 rel="{{ item.link.rel }}"
 			 {% endif %}>
 			<span>{{ item.button_text }}</span> 
-						{% if item.button_style == "hs-arrow-btn" %}<span class="arrow_icon">→</span>{% endif %}
 		</a>
 		{% endif %}
 		{% endif %}

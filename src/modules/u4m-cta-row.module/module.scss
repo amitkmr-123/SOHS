@@ -1,0 +1,230 @@
+@import "../../css/_module-imports";
+
+.u4m-cta-row {
+    .ctarowSec {
+        max-width: 100%;
+        padding: 60rem 20rem;
+        border-radius: 15rem;
+        margin: 0;
+        .intro_content_in {
+            max-width: 1290rem;
+            margin: 0 auto;
+            > .flex_row {
+                gap: 20rem 75rem;
+                align-items: center;
+                @include respond-between(1024px, 1280px) {
+                    gap: 20rem;
+                    justify-content: space-between;
+                }
+            }
+            .titleSec {
+                max-width: 100%;
+                width: 100%;
+                @include navbreakMin {
+                    max-width: 299rem;
+                }
+
+                width: 100%;
+                @include respond-between(1024px, 1280px) {
+                    max-width: 23%;
+                }
+                * {
+                    margin: 0;
+                }
+            }
+            .btnSec {
+                max-width: 100%;
+                width: 100%;
+                @include navbreakMin {
+                    max-width: 293rem;
+                }
+                @include respond-between(1024px, 1280px) {
+                    width: 23%;
+                }
+                .intro_btn_wrap {
+                    margin: 0;
+                    .btn_item {
+                        a {
+                            text-shadow: 0px 0px 4px rgba($black, 0.15);
+                            white-space: nowrap;
+                            @include respond-between(1024px, 1280px) {
+                                white-space: normal;
+                            }
+                        }
+                    }
+                }
+            }
+            .contentSec {
+                max-width: 100%;
+                width: 100%;
+                @include navbreakMin {
+                    width: calc(100% - 742rem);
+                }
+
+                @include respond-between(1024px, 1280px) {
+                    width: 47%;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+html.popUpActive {
+    overflow: hidden;
+}
+
+.formPopup {
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.4);
+    z-index: 555;
+    padding: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease-in;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .formPopupIn {
+        max-width: 650rem;
+        margin: 0 auto;
+        border-radius: 10px;
+        background: $white;
+        padding: 63px 20px 119px;
+        position: relative;
+        .closeBtn {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            right: 12rem;
+            top: 12rem;
+            color: $black;
+            cursor: pointer;
+            svg {
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                path {
+                    stroke: currentColor;
+                }
+            }
+        }
+        .PopupConWrap {
+            .PopupLogo {
+                text-align: center;
+                max-width: 98.847px;
+                margin: 0 auto 20rem;
+            }
+            .Popupttl {
+                margin-bottom: 50rem;
+                text-align: center;
+                -webkit-text-stroke-width: 1.08px;
+                -webkit-text-stroke-color: $black;
+                font-family: "Proxima Nova";
+                font-size: 40.539px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                letter-spacing: -4.459px;
+                text-transform: uppercase;
+                color: transparent;
+                span {
+                    font-family: "Proxima Nova";
+                    font-size: 40.539px;
+                    font-style: italic;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: -4.459px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .PopupCon {
+                color: $black;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                max-width: 335rem;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 50rem;
+            }
+            .PopupForm {
+                form {
+                    margin: 0 auto;
+                    padding: 0;
+                    background: none;
+                    padding: 0;
+                    max-width: 382rem;
+                }
+                .form-title:empty {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.DarkTheme {
+        .formPopupIn {
+            background: $purple;
+            box-shadow: 0px 0px 20px 5px rgba($black, 0.2);
+            .closeBtn {
+                color: $white;
+            }
+            .PopupConWrap {
+                .Popupttl {
+                    -webkit-text-stroke-color: $white;
+                }
+
+                .PopupCon {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.dnd-section .PopupForm form .hs-form-field > label {
+    padding-left: 15px;
+    margin-bottom: 8rem;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.dnd-section .PopupForm form .hs-form-field .input {
+    margin-top: 0;
+}
+
+.dnd-section .PopupForm form .hs-form-field .input .hs-input {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+    margin-bottom: 30rem;
+    border: none;
+    line-height: normal;
+    padding: 19rem 16rem;
+    font-size: 18rem;
+    outline: none;
+    color: #fff;
+}
+
+.dnd-section .PopupForm form .actions .hs-button {
+    margin-bottom: 0;
+    background: #ffffff;
+    color: #373a36;
+}
+
+.dnd-section .PopupForm form .actions {
+    text-align: center;
+}

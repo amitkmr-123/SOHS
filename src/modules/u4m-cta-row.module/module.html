@@ -1,0 +1,130 @@
+{% set moduleName = 'u4m-cta-row' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+	<div class="ctarowSec intro_content{% if module.module_overrides.enable_overrides %} {{ module.module_overrides.inner_background_settings.select_color }}{% endif %}">
+		<div class="intro_content_in">
+			<div class="flex_row">
+				{% if module.intro_content.heading %}
+				<div class="titleSec">
+					<{{ module.intro_content.heading_size }}>{{ module.intro_content.heading }}</{{ module.intro_content.heading_size }}>
+				</div>
+					{% endif %}
+					{% if module.intro_content.content %}
+					<div class="contentSec {{ module.intro_content.content_style }}">
+						{{ module.intro_content.content }}
+					</div>
+					{% endif %}
+					<div class="btnSec">
+						{{ macros.singlebuttonGroup(module.intro_content.button_group)}}
+					</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		</section>
+	{% if module.intro_content.button_group.button_style =="popup" %}
+	<div class="formPopup{% if module.intro_content.button_group.popup_form.dark_theme %} DarkTheme{% endif %}" id="popup_{{ name }}">
+		<div class="formPopupIn">
+		<div class="closeBtn"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+			<path d="M10.6064 3.53516L3.53538 10.6062" stroke="#373A36" stroke-width="0.75" stroke-linecap="round"/>
+			<path d="M10.6064 10.6074L3.53538 3.53635" stroke="#373A36" stroke-width="0.75" stroke-linecap="round"/>
+			</svg></div>
+		<div class="PopupConWrap">
+			{% if module.intro_content.button_group.popup_form.logo.src || module.intro_content.button_group.popup_form.logo_drk.src %}
+			<div class="PopupLogo">
+				{% if module.intro_content.button_group.popup_form.dark_theme %}
+				{% if module.intro_content.button_group.popup_form.logo.src %}
+				<img src="{{ module.intro_content.button_group.popup_form.logo.src }}" alt="{{ module.intro_content.button_group.popup_form.logo.alt }}">
+				{% endif %}
+				{% else %}
+				{% if module.intro_content.button_group.popup_form.logo_drk.src %}
+				<img src="{{ module.intro_content.button_group.popup_form.logo_drk.src }}" alt="{{ module.intro_content.button_group.popup_form.logo_drk.alt }}">
+				{% endif %}
+				{% endif %}
+			</div>
+			{% endif %}
+			{% if module.intro_content.button_group.popup_form.heading %}
+			<div class="Popupttl">
+				{{ module.intro_content.button_group.popup_form.heading }}
+			</div>
+			{% endif %}
+			{% if module.intro_content.button_group.popup_form.content %}
+			<div class="PopupCon">
+				{{ module.intro_content.button_group.popup_form.content }}
+			</div>
+			{% endif %}
+			<div class="PopupForm">
+				{% form
+					form_to_use="{{ module.intro_content.button_group.popup_form.select_form.form_id }}"
+					response_response_type="{{ module.intro_content.button_group.popup_form.select_form.response_type }}"
+					response_message="{{ module.intro_content.button_group.popup_form.select_form.message }}"
+					response_redirect_id="{{ module.intro_content.button_group.popup_form.select_form.redirect_id }}"
+					response_redirect_url="{{module.intro_content.button_group.popup_form.select_form.redirect_url}}"
+					gotowebinar_webinar_key="{{ module.intro_content.button_group.popup_form.select_form.gotowebinar_webinar_key }}"
+				%}
+			</div>
+		</div>
+		</
+	</div>
+	{% endif %}
+
+
+
+
+	{% require_js %}
+	<script>
+// 		function bindPopupTriggers() {
+			// Remove previous event listeners by cloning nodes
+			document.querySelectorAll('.cmPopupTrigger, .formPopup, .formPopup .closeBtn').forEach(el => {
+				const newEl = el.cloneNode(true);
+				el.parentNode.replaceChild(newEl, el);
+			});
+
+			// Handle trigger click
+			document.addEventListener('click', function (e) {
+				if (e.target.matches('.cmPopupTrigger')) {
+					e.preventDefault();
+					const getid = e.target.getAttribute('data-id');
+					document.documentElement.classList.add('popUpActive');
+
+					document.querySelectorAll('.formPopup').forEach(popup => {
+						popup.classList.remove('active');
+					});
+
+					const targetPopup = document.getElementById(getid);
+					if (targetPopup) {
+						targetPopup.classList.add('active');
+					}
+				}
+			});
+
+			// Handle popup background click
+			document.addEventListener('click', function (e) {
+				if (e.target.classList.contains('formPopup')) {
+					e.target.classList.remove('active');
+					document.documentElement.classList.remove('popUpActive');
+				}
+			});
+
+			// Handle close button click
+			document.addEventListener('click', function (e) {
+				if (e.target.matches('.formPopup .closeBtn')) {
+					e.stopPropagation();
+					const popup = e.target.closest('.formPopup');
+					if (popup) {
+						popup.classList.remove('active');
+						document.documentElement.classList.remove('popUpActive');
+					}
+				}
+			});
+// 		}
+
+// 		bindPopupTriggers();
+
+	</script>
+	{% end_require_js %}
+
+
+
+
