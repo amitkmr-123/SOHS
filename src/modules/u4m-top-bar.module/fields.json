@@ -83,13 +83,13 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ] ],
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "hs-sec-btn"
+      "default" : "hs-arrow-btn"
     }, {
       "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
       "name" : "button_text",
@@ -161,7 +161,7 @@
     "display_width" : null,
     "default" : {
       "button_type" : "std",
-      "button_style" : "hs-sec-btn",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "explore new breed",
       "link" : {
         "url" : {
@@ -194,7 +194,7 @@
     "content" : "<p><span>The State of HubSpot is brought to you by New Breed, HubSpot’s most decorated Solutions Partner.</span></p>",
     "button_group" : {
       "button_type" : "std",
-      "button_style" : "hs-sec-btn",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "explore new breed",
       "link" : {
         "url" : {

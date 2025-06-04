@@ -1,347 +1,4 @@
 [ {
-  "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
-  "name" : "intro_content",
-  "label" : "Intro Content",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
-    "name" : "include_eyebrow_text",
-    "label" : "Include Eyebrow Text",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : false
-  }, {
-    "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
-    "name" : "eyebrow_text",
-    "label" : "Eyebrow Text",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_eyebrow_text",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Eyebrow Text"
-  }, {
-    "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
-    "name" : "include_heading",
-    "label" : "Include Heading",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : false
-  }, {
-    "id" : "aef5e961-e297-2654-68e0-6128687770bf",
-    "name" : "heading_size",
-    "label" : "Heading Size",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_heading",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "select",
-    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "h2"
-  }, {
-    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
-    "name" : "heading",
-    "label" : "Heading",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Article Title Goes Here"
-  }, {
-    "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
-    "name" : "include_content",
-    "label" : "Include Content",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : false
-  }, {
-    "id" : "88e2784a-4cb2-624f-1493-1e017330f5bb",
-    "name" : "content_style",
-    "label" : "Content Style",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_content",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "select",
-    "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "bodystyle1"
-  }, {
-    "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
-    "name" : "content",
-    "label" : "Content",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_content",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "type" : "richtext",
-    "display_width" : null,
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
-  }, {
-    "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
-    "name" : "include_button",
-    "label" : "Include Button",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : false
-  }, {
-    "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
-    "name" : "button_group",
-    "label" : "Button Group",
-    "required" : false,
-    "locked" : false,
-    "occurrence" : {
-      "min" : null,
-      "max" : null,
-      "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "default" : 2
-    },
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_button",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "children" : [ {
-      "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "name" : "button_type",
-      "label" : "Button Type",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "std"
-    }, {
-      "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
-      "name" : "button_style",
-      "label" : "Button Style",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "hs-button"
-    }, {
-      "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
-      "name" : "button_text",
-      "label" : "Button Text",
-      "required" : false,
-      "locked" : false,
-      "validation_regex" : "",
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "allow_new_line" : false,
-      "show_emoji_picker" : false,
-      "type" : "text",
-      "display_width" : null,
-      "default" : "Button"
-    }, {
-      "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
-      "name" : "link",
-      "label" : "Link",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
-      "show_advanced_rel_options" : false,
-      "type" : "link",
-      "display_width" : null,
-      "default" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
-      "name" : "cta",
-      "label" : "CTA",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "cta",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "type" : "cta",
-      "display_width" : null
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : [ {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "include_eyebrow_text" : false,
-    "eyebrow_text" : "Eyebrow Text",
-    "include_heading" : false,
-    "heading_size" : "h2",
-    "heading" : "Article Title Goes Here",
-    "include_content" : false,
-    "content_style" : "bodystyle1",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-    "include_button" : false,
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
-  }
-}, {
   "id" : "db54579f-5091-9ef4-9d52-f83b6e04d727",
   "name" : "card_group",
   "label" : "Card Group",
@@ -630,13 +287,13 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ] ],
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "hs-sec-btn"
+      "default" : "hs-arrow-btn"
     }, {
       "id" : "47c17527-3027-4a9f-3a9a-059e338d4045",
       "name" : "button_text",
@@ -708,7 +365,7 @@
     "display_width" : null,
     "default" : {
       "button_type" : "std",
-      "button_style" : "hs-sec-btn",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "click to read this content",
       "link" : {
         "url" : {
@@ -727,6 +384,16 @@
   "type" : "group",
   "display_width" : null,
   "default" : [ {
+    "include_overlay_link" : false,
+    "overlay_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "image" : {
       "size_type" : "auto",
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
@@ -762,7 +429,7 @@
     },
     "button_group" : {
       "button_type" : "std",
-      "button_style" : "hs-sec-btn",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "click to read this content",
       "link" : {
         "url" : {
@@ -773,18 +440,18 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    },
-    "include_overlay_link" : false,
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
     }
   }, {
+    "include_overlay_link" : false,
+    "overlay_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "image" : {
       "size_type" : "auto",
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
@@ -820,7 +487,7 @@
     },
     "button_group" : {
       "button_type" : "std",
-      "button_style" : "hs-sec-btn",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "click to read this content",
       "link" : {
         "url" : {
@@ -831,16 +498,6 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    },
-    "include_overlay_link" : false,
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
     }
   } ]
 }, {
