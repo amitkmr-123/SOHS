@@ -417,7 +417,7 @@ code {
   border-radius: 0;
 }
 
-pre > code {
+pre>code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -512,7 +512,7 @@ section[class*="u4m-"] {
   position: relative;
 }
 
-.bg_overlay ~ *:not(.bg_overlay) {
+.bg_overlay~*:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }
@@ -587,6 +587,7 @@ section[class*="u4m-"] {
   }
 }
 
+
 .reverse-text {
   .intro_content {
     @include darkThemeStyle;
@@ -631,6 +632,10 @@ section[class*="u4m-"] {
 
 .LavenderPurple_bg {
   background-color: $LavenderPurple;
+}
+
+.Charcoal_bg {
+  background-color: $charcoal;
 }
 
 .cards_list_row {

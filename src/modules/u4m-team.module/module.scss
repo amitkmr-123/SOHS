@@ -61,7 +61,7 @@
                     }
 
                     .content_wrap {
-                        background: linear-gradient(180deg, rgba(237, 245, 252, 0.00) 13.52%, rgba(237, 245, 252, 0.65) 36.32%, #FFF 78.96%);
+                        background: linear-gradient(180deg, rgba($ice, 0.00) 13.52%, rgba($ice, 0.65) 36.32%, $white 78.96%);
                         min-height: 273rem;
                         padding: 21rem 30rem 21rem 21rem;
                         display: flex;
@@ -78,7 +78,7 @@
 
                         .cm_company {
                             color: $purple;
-                            font-family: Menlo;
+                            font-family: $font2;
                             font-size: 14px;
                             font-weight: 700;
                             line-height: 1.1428;
@@ -109,7 +109,7 @@
                                 line-height: normal;
                                 letter-spacing: 0.6rem;
                                 text-transform: uppercase;
-                                color: var(--charcoal, #373A36);
+                                color: $charcoal;
                             }
 
                             .cm_social_share {
