@@ -1,7 +1,7 @@
 [ {
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
-  "label" : "Intro Content",
+  "label" : "Content Column",
   "required" : false,
   "locked" : false,
   "children" : [ {
@@ -65,7 +65,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "h4"
+    "default" : "h2"
   }, {
     "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
     "name" : "heading",
@@ -85,7 +85,7 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "display_width" : null,
-    "default" : "Lorem Ipsum"
+    "default" : "Lorem Ipsum Two Line Title Here."
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -134,7 +134,7 @@
     },
     "type" : "richtext",
     "display_width" : null,
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta</p>"
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -144,7 +144,7 @@
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : false
+    "default" : true
   }, {
     "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
     "name" : "button_group",
@@ -155,7 +155,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "default" : 2
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -194,13 +194,13 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ] ],
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "hs-button"
+      "default" : "hs-arrow-btn"
     }, {
       "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
       "name" : "button_text",
@@ -272,20 +272,7 @@
     "display_width" : null,
     "default" : [ {
       "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_style" : "hs-button",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "Button",
       "link" : {
         "url" : {
@@ -307,28 +294,15 @@
     "include_eyebrow_text" : false,
     "eyebrow_text" : "Eyebrow Text",
     "include_heading" : true,
-    "heading_size" : "h4",
-    "heading" : "Lorem Ipsum",
+    "heading_size" : "h2",
+    "heading" : "Lorem Ipsum Two Line Title Here.",
     "include_content" : true,
     "content_style" : "themeStyle",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta</p>",
-    "include_button" : false,
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
+    "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_style" : "hs-button",
+      "button_style" : "hs-arrow-btn",
       "button_text" : "Button",
       "link" : {
         "url" : {
@@ -342,47 +316,31 @@
     } ]
   }
 }, {
-  "id" : "6e4c9982-0850-157b-c3b9-6623fd20060e",
-  "name" : "anchor_group",
-  "label" : "Anchor Group",
+  "id" : "e5cd2660-0ddf-de18-c577-af5920e94d9d",
+  "name" : "image_column",
+  "label" : "Image Column",
   "required" : false,
   "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : "055405db-a79f-5f43-9735-acaf13e7bfef",
-    "default" : 8
-  },
   "children" : [ {
-    "id" : "055405db-a79f-5f43-9735-acaf13e7bfef",
-    "name" : "text",
-    "label" : "Text",
+    "id" : "e2d0e1c9-906a-6cf7-1256-72853134605b",
+    "name" : "image",
+    "label" : "Image",
     "required" : false,
     "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "how do top-performing companies use hubspot?"
-  }, {
-    "id" : "3dced494-a7e8-a7c1-980e-8269a229d096",
-    "name" : "link",
-    "label" : "Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
     "display_width" : null,
     "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.jpg",
+      "alt" : "Image",
+      "loading" : "lazy",
+      "width" : 1374,
+      "height" : 734,
+      "max_width" : 1374,
+      "max_height" : 734
     }
   } ],
   "tab" : "CONTENT",
@@ -390,95 +348,18 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "display_width" : null,
-  "default" : [ {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.jpg",
+      "alt" : "Image",
+      "loading" : "lazy",
+      "width" : 1374,
+      "height" : 734,
+      "max_width" : 1374,
+      "max_height" : 734
     }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "how do top-performing companies use hubspot?",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  } ]
+  }
 }, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
   "name" : "module_settings",
@@ -488,7 +369,7 @@
   "children" : [ {
     "id" : "0a83880d-e7a4-265e-44f8-4237a6ba4090",
     "name" : "intro_content_alignment",
-    "label" : "Intro Content Alignment",
+    "label" : "Content Alignment",
     "required" : false,
     "locked" : false,
     "display" : "select",
@@ -498,7 +379,29 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "center"
+    "default" : "left"
+  }, {
+    "id" : "8f5171bc-a76b-0ef7-803a-afcca8eedefe",
+    "name" : "content_position",
+    "label" : "Content Position",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "image_column.image",
+      "controlling_value_regex" : null,
+      "property" : "src",
+      "operator" : "NOT_EMPTY",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "cm_left", "Left" ], [ "cm_right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cm_right"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -506,7 +409,8 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "intro_content_alignment" : "center"
+    "intro_content_alignment" : "left",
+    "content_position" : "cm_right"
   }
 }, {
   "id" : "module_overrides",
@@ -705,7 +609,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 56
+    "default" : 65
   }, {
     "id" : "custom_top_padding_mobile",
     "name" : "custom_top_padding_mobile",
@@ -765,7 +669,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 159
+    "default" : 65
   }, {
     "id" : "custom_bottom_padding_mobile",
     "name" : "custom_bottom_padding_mobile",
@@ -938,267 +842,6 @@
       }
     }
   }, {
-    "id" : "abbcc7f2-4df9-112f-bb51-a26eb82fd0ca",
-    "name" : "inner_container_settings",
-    "label" : "Inner Container Settings",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "module_overrides.enable_overrides",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "children" : [ {
-      "id" : "b2ed3773-febe-5ae4-eede-3e441afb7fd8",
-      "name" : "select_color",
-      "label" : "Select Background Color",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "purple_bg", "Purple" ], [ "lightblack_bg", "Light Black" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "custom"
-    }, {
-      "id" : "cdb3d5f6-eede-f58e-2131-48af40cb79fe",
-      "name" : "custom_color",
-      "label" : "Custom Background Color",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "module_overrides.inner_container_settings.select_color",
-        "controlling_value_regex" : "custom",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "type" : "color",
-      "display_width" : null,
-      "default" : {
-        "color" : "#000000",
-        "opacity" : 40
-      }
-    }, {
-      "id" : "963e5e5f-1814-6019-95fc-8f4f83ac1683",
-      "name" : "select_list_dot_color",
-      "label" : "Select List Dot Color",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "purple_clr", "Purple" ], [ "lightblack_clr", "Light Black" ], [ "Black_clr", "Black" ], [ "White_clr", "White" ], [ "Green_clr", "Green" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "Green_clr"
-    }, {
-      "id" : "6af6d5f1-4fe9-2f3a-5dc8-1b805ced480a",
-      "name" : "dark_theme",
-      "label" : "Dark Theme",
-      "required" : false,
-      "locked" : false,
-      "display" : "checkbox",
-      "type" : "boolean",
-      "display_width" : null,
-      "default" : true
-    }, {
-      "id" : "0a7fa91c-63ef-d963-3398-d2589af8ded6",
-      "name" : "border_radius",
-      "label" : "Border Radius",
-      "required" : false,
-      "locked" : false,
-      "display" : "slider",
-      "step" : 1,
-      "type" : "number",
-      "display_width" : null,
-      "default" : 15
-    }, {
-      "id" : "001de490-9ce0-70c1-a8c3-cb9ab77ce154",
-      "name" : "spacing",
-      "label" : "Spacing",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "bdeb6afb-a7c8-9e54-6620-f83a3104fd97",
-        "name" : "top",
-        "label" : "Top",
-        "required" : false,
-        "locked" : false,
-        "display" : "text",
-        "step" : 1,
-        "type" : "number",
-        "display_width" : null,
-        "default" : 52
-      }, {
-        "id" : "c07e674e-1067-fafe-d0e6-c2bcad18c10c",
-        "name" : "right",
-        "label" : "Right",
-        "required" : false,
-        "locked" : false,
-        "display" : "text",
-        "step" : 1,
-        "type" : "number",
-        "display_width" : null,
-        "default" : 151
-      }, {
-        "id" : "12af2baa-b446-c305-72cc-40361c8908f2",
-        "name" : "bottom",
-        "label" : "Bottom",
-        "required" : false,
-        "locked" : false,
-        "display" : "text",
-        "step" : 1,
-        "type" : "number",
-        "display_width" : null,
-        "default" : 52
-      }, {
-        "id" : "a55b1634-089e-d8b8-6131-5123d9a4392e",
-        "name" : "left",
-        "label" : "Left",
-        "required" : false,
-        "locked" : false,
-        "display" : "text",
-        "step" : 1,
-        "type" : "number",
-        "display_width" : null,
-        "default" : 151
-      }, {
-        "id" : "c988ae19-3363-e1df-81e3-285e77d85fc2",
-        "name" : "change_in_mobile",
-        "label" : "Change In Mobile",
-        "required" : false,
-        "locked" : false,
-        "display" : "checkbox",
-        "type" : "boolean",
-        "display_width" : null,
-        "default" : true
-      }, {
-        "id" : "a514607e-d6f9-574e-99b3-d847639d76ad",
-        "name" : "mobile_spacing",
-        "label" : "Mobile Spacing",
-        "required" : false,
-        "locked" : false,
-        "visibility" : {
-          "controlling_field" : null,
-          "controlling_field_path" : "module_overrides.inner_container_settings.spacing.change_in_mobile",
-          "controlling_value_regex" : "true",
-          "property" : null,
-          "operator" : "EQUAL",
-          "access" : null
-        },
-        "children" : [ {
-          "id" : "616fb34a-40c8-7b56-1f00-c821f8c8a7b9",
-          "name" : "top",
-          "label" : "Top",
-          "required" : false,
-          "locked" : false,
-          "display" : "text",
-          "step" : 1,
-          "type" : "number",
-          "display_width" : null,
-          "default" : 30
-        }, {
-          "id" : "246e09e5-4e4d-c366-2138-b4c856439ed3",
-          "name" : "right",
-          "label" : "Right",
-          "required" : false,
-          "locked" : false,
-          "display" : "text",
-          "step" : 1,
-          "type" : "number",
-          "display_width" : null,
-          "default" : 30
-        }, {
-          "id" : "4094249f-b407-982a-70bb-dd7f8fd2ab9b",
-          "name" : "bottom",
-          "label" : "Bottom",
-          "required" : false,
-          "locked" : false,
-          "display" : "text",
-          "step" : 1,
-          "type" : "number",
-          "display_width" : null,
-          "default" : 30
-        }, {
-          "id" : "6fd4f8bf-27e2-cc99-421e-0aa40f9d5082",
-          "name" : "left",
-          "label" : "Left",
-          "required" : false,
-          "locked" : false,
-          "display" : "text",
-          "step" : 1,
-          "type" : "number",
-          "display_width" : null,
-          "default" : 30
-        } ],
-        "tab" : "CONTENT",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "top" : 30,
-          "right" : 30,
-          "bottom" : 30,
-          "left" : 30
-        }
-      } ],
-      "tab" : "CONTENT",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "top" : 52,
-        "right" : 151,
-        "bottom" : 52,
-        "left" : 151,
-        "change_in_mobile" : true,
-        "mobile_spacing" : {
-          "top" : 30,
-          "right" : 30,
-          "bottom" : 30,
-          "left" : 30
-        }
-      }
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : true,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "select_color" : "custom",
-      "custom_color" : {
-        "color" : "#000000",
-        "opacity" : 40
-      },
-      "select_list_dot_color" : "Green_clr",
-      "dark_theme" : true,
-      "border_radius" : 15,
-      "spacing" : {
-        "top" : 52,
-        "right" : 151,
-        "bottom" : 52,
-        "left" : 151,
-        "change_in_mobile" : true,
-        "mobile_spacing" : {
-          "top" : 30,
-          "right" : 30,
-          "bottom" : 30,
-          "left" : 30
-        }
-      }
-    }
-  }, {
     "id" : "fc248331-90d9-cb7e-66f6-4b85de179aa9",
     "name" : "container_size",
     "label" : "Container Size",
@@ -1240,7 +883,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 1447
+    "default" : 1446
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -1256,10 +899,10 @@
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-custom",
-    "custom_top_padding" : 56,
+    "custom_top_padding" : 65,
     "custom_top_padding_mobile" : 50,
     "bottom_padding" : "bottom-padding-custom",
-    "custom_bottom_padding" : 159,
+    "custom_bottom_padding" : 65,
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : true,
     "background_settings" : {
@@ -1277,30 +920,7 @@
         "opacity" : null
       }
     },
-    "inner_container_settings" : {
-      "select_color" : "custom",
-      "custom_color" : {
-        "color" : "#000000",
-        "opacity" : 40
-      },
-      "select_list_dot_color" : "Green_clr",
-      "dark_theme" : true,
-      "border_radius" : 15,
-      "spacing" : {
-        "top" : 52,
-        "right" : 151,
-        "bottom" : 52,
-        "left" : 151,
-        "change_in_mobile" : true,
-        "mobile_spacing" : {
-          "top" : 30,
-          "right" : 30,
-          "bottom" : 30,
-          "left" : 30
-        }
-      }
-    },
     "container_size" : "custom",
-    "custom_container_size" : 1447
+    "custom_container_size" : 1446
   }
 } ]

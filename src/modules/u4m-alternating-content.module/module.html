@@ -1,0 +1,24 @@
+{% set moduleName = 'cm_alternating_content' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+	<div class="cm_alter_cnt_wrap {% if module.image_column.image.src %}{{ module.module_settings.content_position }}{% endif %} {% if not module.image_column.image.src %}no_image_column{% endif %}">
+		{% if module.image_column.image.src %}
+		<div class="cm_image_wrap">
+			<div class="img_wrap">
+				<img src="{{ module.image_column.image.src|escape_url }}" alt="{{ module.image_column.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+			</div>
+		</div>
+		{% endif %}
+		<div class="cm_content_wrap">
+			{{ macros.introGroup(module.intro_content, module.module_settings) }}
+		</div>
+	</div>
+</div>
+</section>
+
+
+
+
+
+

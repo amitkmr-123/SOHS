@@ -1,0 +1,79 @@
+@import "../../css/_module-imports";
+
+.cm_alternating_content {
+    .cm_alter_cnt_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 87rem;
+        row-gap: 40rem;
+
+        @include tablet {
+            column-gap: 40rem;
+        }
+
+        &.no_image_column {
+            .cm_content_wrap {
+                width: 100%;
+            }
+        }
+
+        &.cm_left {
+            flex-direction: row-reverse;
+
+            @include tabletvert {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .cm_content_wrap {
+            width: calc(48.044% - 43.5rem);
+
+            @include tablet {
+                width: calc(50% - 20rem);
+            }
+
+            @include tabletvert {
+                width: 100%;
+            }
+
+            .intro_content {
+                margin-bottom: 0;
+
+                .intro__inner {
+                    .intro_title {
+                        margin-bottom: 30rem;
+                    }
+                }
+            }
+        }
+
+        .cm_image_wrap {
+            width: calc(51.956% - 43.5rem);
+
+            @include tablet {
+                width: calc(50% - 20rem);
+            }
+
+            @include tabletvert {
+                width: 100%;
+            }
+
+            .img_wrap {
+                width: 100%;
+                position: relative;
+                min-height: 367rem;
+                border-radius: 15px;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
