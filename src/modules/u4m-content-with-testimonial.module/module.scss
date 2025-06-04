@@ -6,6 +6,10 @@
   &.reverse-text {
     .left_content_column {
       @include darkThemeStyle;
+
+      .top_content * {
+        color: $SunbeamYellow;
+      }
     }
   }
 

@@ -190,13 +190,16 @@
 }
 
 @mixin eyebrow {
-  font-family: $font1;
-  font-size: 24rem;
-  font-weight: 900;
-  line-height: 1;
   display: block;
+  font-family: $font1;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   margin-bottom: 10rem;
-  color: $lightturquoise;
+  color: $SunbeamYellow;
 }
 
 @mixin size12 {

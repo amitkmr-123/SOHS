@@ -7,6 +7,12 @@
     padding-top: 48px;
     padding-bottom: 48px;
 
+    &.lesscards {
+      &::after {
+        display: none;
+      }
+    }
+
     @include navbreak {
       row-gap: 120px;
     }

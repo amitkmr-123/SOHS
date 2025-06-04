@@ -1,0 +1,103 @@
+{% set moduleName = 'u4m-content-cards' %}
+{% include "../partials/u4-module-includes.html" %}
+
+{% set query = '' %}
+
+{% set table = module.select_table %}
+{% set rowData = hubdb_table_rows(table,query~"&limit=500")%}
+
+
+{% set current_date_str = unixtimestamp(local_dt) %}
+{% set past_events = [] %}
+{% set upcoming_events = [] %}
+
+{% for row in rowData %}
+{% if row.date > current_date_str %}
+{% do upcoming_events.append(row) %}
+{% endif %}
+{% endfor %}
+
+
+{% set events_data = upcoming_events|sort(False, False, "date") %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+	<div class="cards_list">
+		<div class="flex_row">
+			{% for item in events_data %}
+			<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+				<div class="card_item_inner ">
+					<div class="card_row {{ module.module_settings.card_theme_group.background_color }} {% if module.module_settings.card_theme_group.dark_theme %}lightCnt{% endif %}">
+						<a  href="{{ item.link }}"  class="overlayLink"></a>
+						{% if item.image.url %}
+						<div class="card_img" style="background-image: url({{ item.image.url }})">
+						</div>
+						{% endif %}
+
+						<div class="card_body">
+							<div class="topCntt">
+								<div class="card_meta">
+									<div class="card_meta_tag">
+
+										<span class="tag_icon tyimage">
+											<img src="{{item.category_icon.url}}"/>
+										</span>
+										<span class="tag_name">
+											{{ item.category.name }}
+										</span>
+									</div>
+
+									{% if item.podcast_audio %}
+									<div class="podcast_mmark">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+												<g clip-path="url(#clip0_2001_985)">
+													<path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+												<defs>
+													<clipPath id="clip0_2001_985">
+														<rect width="12" height="12" fill="white"/>
+													</clipPath>
+												</defs>
+											</svg>
+										</span>
+									</div>
+									{% endif %}
+								</div>
+
+								<h4 class="title">
+									{{ item.name }}
+								</h4>
+
+								{% if item.description %}
+								<div class="description">
+									{{ item.description }}
+								</div>
+								{% endif %}
+							</div>
+
+							
+							<div class="btmCnt">
+							<div class="btn_item">
+								<a class="hs-arrow-btn " href="{{item.link}}">
+									<span>{{ module.link_text }}</span> <span>→</span>
+								</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{# #}
+		</div>
+	</div>
+
+</div>
+</section>
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+@import "../../css/_module-imports";
+
+.u4m-content-grid {
+  position: relative;
+
+  &.reverse-text {
+    .cards_list_row {
+      @include darkThemeStyle;
+    }
+  }
+}

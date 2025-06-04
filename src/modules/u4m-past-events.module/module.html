@@ -1,0 +1,114 @@
+{% set moduleName = 'u4m-content-grid' %}
+{% include "../partials/u4-module-includes.html" %}
+
+{% set current_dt = unixtimestamp(local_dt) %}
+
+{% set query = '' %}
+
+{% set table = module.select_table %}
+{% set rowData = hubdb_table_rows(table,query~"&limit=500")%}
+
+{% set past_events = [] %}
+{% set upcoming_events = [] %}
+
+{% set current_date_str = unixtimestamp(local_dt) %}
+{% set past_events = [] %}
+{% for row in rowData %}
+{% if row.date < current_date_str %}
+{% do past_events.append(row) %}
+{% endif %}
+{% endfor %}
+
+{% set past_events = past_events|sort(True, True, "date") %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+	<div class="cards_list_row ">
+		<div class="flex_row {% if past_events|length > 2%}moreCards{% else %}lesscards{% endif %}">
+			{% for item in past_events %}
+			<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+				<div class="card_item_inner ">
+					<a  href="{{ item.link }}"  class="overlay_link"></a>
+					<div class="card_row">
+						{% if item.image.url %}
+						<div class="card_img" style="background-image: url({{ item.image.url }})">
+						</div>
+						{% endif %}
+
+						<div class="card_body">
+							<div class="card_meta">
+								<div class="card_meta_tag">
+
+									<span class="tag_icon tyimage">
+										<img src="{{item.category_icon.url}}"/>
+									</span>
+									<span class="tag_name">
+										{{ item.category.name }}
+									</span>
+								</div>
+
+								{% if item.podcast_audio %}
+								<div class="podcast_mmark">
+									<span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+											<g clip-path="url(#clip0_2001_985)">
+												<path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+											<defs>
+												<clipPath id="clip0_2001_985">
+													<rect width="12" height="12" fill="white"/>
+												</clipPath>
+											</defs>
+										</svg>
+									</span>
+								</div>
+								{% endif %}
+							</div>
+							<h4 class="title">
+								{{ item.name }}
+							</h4>
+							{% if loop.index == 3%}
+							<div class="authors_wrap">
+								<div class="auth_item">
+									{% if item.author_image.url %}
+									<span class="auth_img">
+										<img src="{{ item.author_image.url }}" alt="{{ item.author_name }}">
+									</span>
+									{% endif %}
+									<span class="author_info">
+										{{ item.author_name }} {{ item.author_role }}
+									</span>
+								</div>
+								<div class="auth_item">
+									{% if item.author_2_image.url %}
+									<span class="auth_img">
+										<img src="{{ item.author_2_image.url }}" alt="{{ item.author_2_name }}">
+									</span>
+									{% endif %}
+									<span class="author_info">
+										{{ item.author_2_name }} {{ item.author_2_role }}
+									</span>
+								</div>
+							</div>
+							{% else %}
+							<div class="description">
+								{{ item.description }}
+							</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+

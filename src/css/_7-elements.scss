@@ -417,7 +417,7 @@ code {
   border-radius: 0;
 }
 
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -512,7 +512,7 @@ section[class*="u4m-"] {
   position: relative;
 }
 
-.bg_overlay~*:not(.bg_overlay) {
+.bg_overlay ~ *:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }
@@ -587,10 +587,13 @@ section[class*="u4m-"] {
   }
 }
 
-
 .reverse-text {
   .intro_content {
     @include darkThemeStyle;
+  }
+
+  .hs-arrow-btn {
+    @include arrowbuttonWhite;
   }
 }
 
@@ -600,6 +603,10 @@ section[class*="u4m-"] {
 
 .hs-sec-btn {
   @include buttonSecond;
+}
+
+.hs-arrow-btn {
+  @include arrowbutton;
 }
 
 .purple_bg {
@@ -684,4 +691,27 @@ section[class*="u4m-"] {
 
 .cards_list_row {
   @include contentCards;
+}
+
+section {
+  &:not(.reverse-text) {
+    .cards_list_row {
+      .card_item {
+        @include tablet {
+          padding: 48px 0;
+          border-top: 1px solid $LavenderPurple;
+        }
+
+        .card_meta_tag {
+          background-color: $ice;
+          border: 1px solid $MidGray;
+        }
+
+        .description,
+        .title {
+          color: $charcoal;
+        }
+      }
+    }
+  }
 }

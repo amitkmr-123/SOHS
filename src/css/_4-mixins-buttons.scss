@@ -28,7 +28,36 @@
 
 @mixin buttonSecond {
   @include button;
+
+  background-color: $lightturquoise;
+  color: $charcoal;
+
+  &:hover,
+  &:focus {
+    background-color: $lightturquoise;
+    color: $charcoal;
+  }
 }
+
+@mixin arrowbutton {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16rem;
+  line-height: 1;
+  font-family: $font1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  span + span {
+    color: $green;
+  }
+}
+
+@mixin arrowbuttonWhite {
+  @include arrowbutton;
+  color: $white;
+}
+
 //
 @mixin buttonSmall {
   @include button;

@@ -1,0 +1,199 @@
+@import "../../css/_module-imports";
+
+.u4m-content-cards {
+  .flex_row {
+    row-gap: 40px;
+
+    .card_item {
+      padding: 0 13px;
+      width: 50%;
+
+      .card_item_inner {
+        position: relative;
+      }
+
+      a.overlayLink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .card_img {
+        width: 687px;
+        min-height: 367px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .card_body {
+        padding-top: 46px;
+        padding-left: 31px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+
+        .card_meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 22px;
+          margin-bottom: 30px;
+
+          .card_meta_tag {
+            flex-shrink: 0;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 6px;
+            background-color: $lightblack;
+
+            span.tag_name {
+              text-transform: uppercase;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 12px;
+              line-height: 12px;
+              letter-spacing: 0.05em;
+            }
+
+            span.tag_icon {
+              font-size: 10px;
+
+              svg {
+                width: 1em;
+                height: 1em;
+                fill: currentColor;
+                display: block;
+              }
+            }
+
+            span.tag_icon.tyimage {
+              width: 10px;
+              display: inline-block;
+              flex-shrink: 0;
+
+              img {
+                width: 10px;
+                display: block;
+              }
+            }
+          }
+
+          .podcast_mmark {
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+
+        .title {
+          margin-top: 0;
+          margin-bottom: 30px;
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+
+    margin: 0 -13px;
+
+    .card_row {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  }
+
+  .flex_row {
+    .card_row.lightCnt {
+      color: $white;
+
+      .title {
+        color: $white;
+      }
+
+      .card_body {
+        .card_meta {
+          .podcast_mmark {
+            svg {
+              fill: inherit;
+
+              path {
+                stroke: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card_row {
+      color: $black;
+
+      .title {
+        color: $black;
+      }
+
+      .card_body {
+        .card_meta {
+          .podcast_mmark {
+            svg {
+              fill: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .flex_row {
+    .card_item {
+      .card_body {
+        .btmCnt {
+          margin-top: auto;
+        }
+
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 367px);
+
+        .btn_item {
+          a {
+            margin: 0;
+          }
+
+          margin-top: 30px;
+        }
+      }
+
+      .card_item_inner {
+        height: 100%;
+
+        .card_row {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include tabletvert {
+  .u4m-content-cards {
+    .flex_row {
+      .card_item {
+        width: 100%;
+
+        .card_body {
+          padding: 20px;
+        }
+      }
+
+      margin: 0;
+    }
+  }
+}
