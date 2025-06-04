@@ -49,6 +49,43 @@
     }
 }
 
+
+.u4m-top-bar.reverse-text {
+    .topbarInner {
+        .outerwrp {
+            .flex_row {
+                .intro_btn_wrap {
+                    a.hs-arrow-btn {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.u4m-top-bar {
+    .topbarInner {
+        .outerwrp {
+            .flex_row {
+                .intro_btn_wrap {
+                    a.hs-arrow-btn {
+                        display: flex;
+                        gap: 10px;
+                        font-style: normal;
+                        font-weight: 700;
+                        @include size14;
+                        line-height: 16px;
+                        letter-spacing: 0.15em;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .u4m-top-bar.reverse-text {
     .des {
         >* {
