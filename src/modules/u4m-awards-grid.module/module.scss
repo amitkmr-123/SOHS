@@ -1,0 +1,331 @@
+@import "../../css/_module-imports";
+
+@mixin darkBg {
+    &.darkTheme {
+        color: $white;
+        * {
+            color: $white;
+        }
+    }
+}
+.u4m-awards-grid {
+    .awardsGridItem {
+        .awardsGridLeft {
+            width: 100%;
+            position: relative;
+            @include tabletmidmin {
+                border-right: 0.75px solid $LavenderPurple;
+                width: calc(100% - 394rem);
+            }
+            @include tabletmid {
+                padding-bottom: 40px;
+                border-bottom: 0.75px solid $LavenderPurple;
+            }
+            .awardsGridLeftin {
+                position: relative;
+                @include navbreak {
+                    padding-right: 30rem;
+                }
+
+                > .flex_row {
+                    align-items: center;
+                    @include navbreak {
+                        gap: 20px;
+                    }
+                }
+                .logoCard {
+                    max-width: 314rem;
+                    width: 100%;
+                    .logoCardIn {
+                        @include darkBg;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 15rem;
+                        padding: 49rem 61rem;
+                        text-align: center;
+                        .logoCardTitle {
+                            font-family: $font2;
+                            font-weight: 700;
+                            @include size14;
+                            line-height: 1.1428571428571428;
+                            text-transform: uppercase;
+                            letter-spacing: 2.1rem;
+                            margin-bottom: 65rem;
+                        }
+                    }
+                }
+                .contentCard {
+                    @include darkBg;
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 17rem;
+                    @include navbreakMin {
+                        max-width: calc(100% - 314rem);
+                        padding-right: 91rem;
+                        padding-left: 35rem;
+                    }
+                    .contentCardTag {
+                        display: flex;
+                        .contentCardTagIn {
+                            padding: 8rem 12rem;
+                            background: $lightblack;
+                            border-radius: 6px;
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                            font-family: $font1;
+                            font-weight: 800;
+                            color: $white;
+                            @include size12;
+                            line-height: 1;
+                            text-transform: uppercase;
+                            letter-spacing: 0.6rem;
+                            svg {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+
+                    .contentCardTtl {
+                        * {
+                            margin: 0;
+                        }
+                    }
+                    .contentCardCon {
+                        margin-bottom: 23rem;
+                        *:last-child {
+                            margin: 0;
+                        }
+                    }
+
+                    .contentCardMeta {
+                        font-family: $font2;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 16px;
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                        display: flex;
+                        gap: 40rem;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+            &:after {
+                @include tabletmidmin {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    position: absolute;
+                    top: -4px;
+                    background: $LavenderPurple;
+                    right: -4px;
+                }
+            }
+        }
+
+        .awardsGridRight {
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            @include tabletmidmin {
+                max-width: 394rem;
+                padding-left: 40px;
+            }
+            @include navbreakMin {
+                padding-left: 79px;
+            }
+            .awardsGridRightin {
+                width: 100%;
+                @include darkBg;
+                .flex_row {
+                    gap: 32rem;
+                    @include navbreakMin {
+                        justify-content: end;
+                    }
+                }
+                .awardsGridRighttag {
+                    display: flex;
+                    margin-bottom: 35rem;
+                    .awardsGridRighttagIn {
+                        padding: 8rem 12rem;
+                        border-radius: 6px;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                        font-family: $font1;
+                        font-weight: 800;
+                        @include size12;
+                        line-height: 1;
+                        text-transform: uppercase;
+                        letter-spacing: 0.6rem;
+                        border: 0.75px solid $LavenderPurple;
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+                .awardsGridRgtCard {
+                    width: 100%;
+                    text-align: center;
+                    &.oneCard {
+                        max-width: 314rem;
+                        .awardsGridRgtCardin {
+                            padding: 17rem;
+                            border-radius: 15rem;
+                            .awardsGridRighttag {
+                                margin-bottom: 81rem;
+                            }
+                        }
+                    }
+                    .awardsGridRgtCardin {
+                        padding: 17rem;
+                        border-radius: 9rem;
+                        aspect-ratio: 1 / 1;
+                        .flex_row {
+                            justify-content: end;
+                        }
+                    }
+                    &:not(.oneCard) {
+                        max-width: calc((100% - 32rem) / 2);
+                        .awardsGridRgtCardin {
+                            display: flex;
+                            .awardsGridRighttag {
+                                margin-bottom: 81rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &.noContent {
+                @include tabletmid {
+                    display: none !important;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            .awardsGridLeft,
+            .awardsGridRight {
+                border-bottom: 0.75px solid $LavenderPurple;
+                padding-bottom: 40px;
+
+                @include tabletmidmin {
+                    padding-bottom: 80px;
+                }
+
+                @include navbreakMin {
+                    padding-bottom: 131px;
+                }
+            }
+        }
+        &:not(:first-child) {
+            .awardsGridLeft,
+            .awardsGridRight {
+                padding-top: 40px;
+                @include tabletmidmin {
+                    padding-top: 80px;
+                }
+                @include navbreakMin {
+                    padding-top: 131px;
+                }
+            }
+        }
+        &.lightblack_bg_aftr {
+            .awardsGridLeft {
+                &:after {
+                    background-color: $white;
+                }
+            }
+        }
+
+        &.afterbg {
+            position: relative;
+            & + .awardsGridItem {
+                .awardsGridLeft {
+                    &:after {
+                        background-color: $white;
+                    }
+                }
+            }
+            &:before {
+                @include tabletmidmin {
+                    content: "";
+                    position: absolute;
+                    width: 50vw;
+                    left: -50vw;
+                    top: -1.5px;
+                    height: calc(100% + 1.5rem);
+                    border-top: 0.75px solid $LavenderPurple;
+                    border-bottom: 0.75px solid $LavenderPurple;
+                }
+            }
+            .awardsGridLeft {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include tabletmid {
+                        width: calc(100% + 40rem);
+                        left: -20rem;
+                        top: -1.5rem;
+                        border-top: 0.75px solid $LavenderPurple;
+                        border-bottom: 0.75px solid $LavenderPurple;
+                        height: calc(100% + 2rem);
+                    }
+                }
+            }
+            &.purple_bg_aftr {
+                &:before {
+                    background-color: $purple;
+                }
+                .awardsGridLeft {
+                    &:before {
+                        background-color: $purple;
+                    }
+                }
+            }
+
+            &.lightblack_bg_aftr {
+                &:before {
+                    background-color: $lightblack;
+                }
+                .awardsGridLeft {
+                    &:before {
+                        background-color: $lightblack;
+                    }
+                }
+            }
+
+            &.Black_bg_aftr {
+                &:before {
+                    background-color: $black;
+                }
+                .awardsGridLeft {
+                    &:before {
+                        background-color: $black;
+                    }
+                }
+            }
+
+            &.White_bg_aftr {
+                &:before {
+                    background-color: $white;
+                }
+                .awardsGridLeft {
+                    &:before {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

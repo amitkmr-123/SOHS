@@ -1,0 +1,99 @@
+{% set moduleName = 'u4m-awards-grid' %}
+{% include "../partials/u4-module-includes.html" %}
+{% set star='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L10.1631 6.27934L15 6.96556L11.5 10.2966L12.3262 15L8 12.7793L3.67376 15L4.5 10.2966L1 6.96556L5.83688 6.27934L8 2Z" stroke="#AB89FA" stroke-width="2" stroke-linejoin="round"/></svg>'%}
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+
+	<div class="awardsGridItems">
+		{% for item in module.items %}
+		<div class="awardsGridItem awardsGridItem{{ loop.index }}{% if item.left_section.section_settings.enable_section_background %} {{ item.left_section.section_settings.select_background_color }} afterbg{% endif %}">
+			<div class="flex_row">
+				<div class="awardsGridLeft">
+					<div class="awardsGridLeftin">
+						<div class="flex_row">
+							<div class="logoCard">
+								<div class="logoCardIn {{ item.left_section.card.select_background_color }}{% if item.left_section.card.dark_theme %} darkTheme{% endif %}">
+									{% if item.left_section.card.company_name %}
+									<div class="logoCardTitle">
+										{{ item.left_section.card.company_name }}
+									</div>
+									{% endif %}
+									{% if item.left_section.card.logo.src %}
+									<div class="awardslogo">
+										<img src="{{ item.left_section.card.logo.src }}" alt="{{ item.left_section.card.logo.alt }}">
+									</div>
+									{% endif %}
+
+								</div>
+							</div>
+							<div class="contentCard{% if item.left_section.section_settings.dark_theme %} darkTheme{% endif %}">
+								{% if item.left_section.content_section.tag %}
+								<div class="contentCardTag">
+									<div class="contentCardTagIn">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+										<path d="M13.9447 3.04697C12.5376 1.65101 10.2563 1.65101 8.84926 3.04697L8 4L7.15074 3.04699C5.74368 1.65102 3.46237 1.65102 2.0553 3.04699C0.648234 4.44295 0.648232 6.70626 2.0553 8.10222L7.99998 14L13.9447 8.10221C15.3518 6.70625 15.3518 4.44294 13.9447 3.04697Z" stroke="#3AD531" stroke-width="2" stroke-linejoin="round"/>
+									</svg>
+									{{ item.left_section.content_section.tag }}
+								</div>
+								</div>
+								{% endif %}
+								{% if item.left_section.content_section.heading  %}
+								<div class="contentCardTtl">
+									<{{ item.left_section.content_section.heading_size }}>{{ item.left_section.content_section.heading }}</{{ item.left_section.content_section.heading_size }}>
+								</div>
+									{% endif %}
+									{% if item.left_section.content_section.heading  %}
+									<div class="contentCardCon {{ item.left_section.content_section.content_style }}">
+										{{ item.left_section.content_section.content }}
+									</div>
+									{% endif %}
+									{% if item.left_section.content_section.industry || item.left_section.content_section.founded || item.left_section.content_section.headquarters  %}
+									<div class="contentCardMeta">
+										{% if item.left_section.content_section.industry %}
+										<span class="contentCardIndustry">industry: {{ item.left_section.content_section.industry }}</span>
+										{% endif %}
+										{% if item.left_section.content_section.founded %}
+										<span class="contentCardFounded">founded: {{ item.left_section.content_section.founded }}</span>
+										{% endif %}
+										{% if item.left_section.content_section.headquarters %}
+										<span class="contentCardHeadquarters">headquarters: {{ item.left_section.content_section.headquarters }}</span>
+										{% endif %}
+									</div>
+									{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="awardsGridRight {% if item.right_section.card|length >= 1 && item.right_section.tag %}{% else %}noContent{% endif %}">
+							<div class="awardsGridRightin {% if item.right_section.dark_theme %} darkTheme{% endif %}">
+
+								{% if item.right_section.card|length > 1 and item.right_section.tag %}
+								<div class="awardsGridRighttag"><div class="awardsGridRighttagIn">{{ star }} {{ item.right_section.tag }}</div></div>
+								{% endif %}
+
+								<div class="flex_row">
+									{% for item2 in item.right_section.card %}
+									{% if item2.logo.src %}
+									<div class="awardsGridRgtCard {% if item.right_section.card|length == 1 and item.right_section.tag %}oneCard{% endif %}">
+										<div class="awardsGridRgtCardin {{ item.right_section.select_background_color }}">
+											{% if item.right_section.card|length == 1 and item.right_section.tag %}
+											<div class="awardsGridRighttag"><div class="awardsGridRighttagIn">{{ star }} {{ item.right_section.tag }}</div></div>
+											{% endif %}
+											<img src="{{ item2.logo.src }}" alt="{{ item2.logo.alt }}">
+										</div>
+									</div>
+									{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+		</div>
+		</section>
+
+
