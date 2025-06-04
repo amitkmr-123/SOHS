@@ -1,0 +1,75 @@
+{% set moduleName = 'cm_anchor_nav' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+
+	<div class="cm_anchor_wrap">
+		<div class="cm_anchor_inner {{ module.module_overrides.inner_container_settings.select_color }} {% if module.module_overrides.inner_container_settings.dark_theme %}cm_dark_theme {% endif %}">
+			<div class="cm_anchor_list">
+				{% for item in module.anchor_group %}
+				<div class="items item_{{loop.index}}">
+					{% if item.text %}
+					<div class="item_inner">
+						<span class="icon_wrap {{ module.module_overrides.inner_container_settings.select_list_dot_color }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+								<circle cx="5" cy="5" r="4.5" fill="currentColor"/>
+							</svg>
+						</span>
+						<div class="cm_cnt_wrap">
+							<p>
+								{% set href = item.link.url.href %}
+								{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+								{% set href = "mailto:" + href %}
+								{% elif item.link.url.type is equalto "PHONE_NUMBER" %}
+								{% set href = "tel:" + href %}
+								{% endif %}
+								<a
+									 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+									 href="{{ href }}"
+									 {% else %}
+									 href="{{ href|escape_url }}"
+									 {% endif %}
+									 {% if item.link.open_in_new_tab %}
+									 target="_blank"
+									 {% endif %}
+									 {% if item.link.rel %}
+									 rel="{{ item.link.rel|escape_attr }}"
+									 {% endif %}
+									 >
+									{{ item.text }}
+								</a>
+							</p>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+{% require_css %}
+<style>
+	.{{moduleName}}.{{name}} .cm_anchor_wrap .cm_anchor_inner{
+		padding:{{ module.module_overrides.inner_container_settings.spacing.top }}rem {{ module.module_overrides.inner_container_settings.spacing.right }}rem {{ module.module_overrides.inner_container_settings.spacing.bottom }}rem {{ module.module_overrides.inner_container_settings.spacing.left }}rem;
+		border-radius:{{ module.module_overrides.inner_container_settings.border_radius }}rem;
+		{% if module.module_overrides.inner_container_settings.select_color == "custom" %}
+		background-color:{{ module.module_overrides.inner_container_settings.custom_color.rgba }};
+		{% endif %}
+	}
+	{% if module.module_overrides.inner_container_settings.spacing.change_in_mobile %}
+	@media(max-width:767px){
+		.{{moduleName}}.{{name}} .cm_anchor_wrap .cm_anchor_inner{
+			padding:{{ module.module_overrides.inner_container_settings.spacing.mobile_spacing.top }}rem {{ module.module_overrides.inner_container_settings.spacing.mobile_spacing.right }}rem {{ module.module_overrides.inner_container_settings.spacing.mobile_spacing.bottom }}rem {{ module.module_overrides.inner_container_settings.spacing.mobile_spacing.left }}rem;
+		}
+	}
+	{% endif %}
+</style>
+{% end_require_css %}
+
+
+

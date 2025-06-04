@@ -638,6 +638,50 @@ section[class*="u4m-"] {
   background-color: $charcoal;
 }
 
+.Green_bg {
+  background-color: $green;
+}
+
+.purple_clr {
+  color: $purple;
+}
+
+.lightblack_clr {
+  color: $lightblack;
+}
+
+.Black_clr {
+  color: $black;
+}
+
+.White_clr {
+  color: $white;
+}
+
+.SunbeamYellow_clr {
+  color: $SunbeamYellow;
+}
+
+.MidGray_clr {
+  color: $MidGray;
+}
+
+.Ice_clr {
+  color: $ice;
+}
+
+.LavenderPurple_clr {
+  color: $LavenderPurple;
+}
+
+.Charcoal_clr {
+  color: $charcoal;
+}
+
+.Green_clr {
+  color: $green;
+}
+
 .cards_list_row {
   @include contentCards;
 }

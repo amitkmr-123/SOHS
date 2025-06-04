@@ -1,0 +1,76 @@
+@import "../../css/_module-imports";
+
+.cm_anchor_nav {
+    .intro_content {
+        margin-bottom: 53rem;
+
+        .intro_title {
+            margin-bottom: 25rem;
+        }
+    }
+
+    .cm_anchor_wrap {
+        .cm_anchor_inner {
+            overflow: hidden;
+
+            &.cm_dark_theme {
+                .cm_anchor_list {
+                    .items {
+                        .item_inner {
+                            .cm_cnt_wrap {
+                                * {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cm_anchor_list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                column-gap: 50rem;
+                row-gap: 28rem;
+
+                .items {
+                    .item_inner {
+                        display: flex;
+                        gap: 15rem;
+
+                        .icon_wrap {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 9rem;
+                            height: 9rem;
+                            flex-shrink: 0;
+                            margin-top: 3.5rem;
+
+                            svg {
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .cm_cnt_wrap {
+                            p {
+                                margin: 0;
+                                font-family: $font2;
+                                @include size14;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 1.1428;
+                                letter-spacing: 2.1rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
