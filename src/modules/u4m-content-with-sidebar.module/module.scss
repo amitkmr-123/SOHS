@@ -1,0 +1,181 @@
+@import "../../css/_module-imports";
+
+
+
+.u4m-content-with-sidebar {
+    .btmCntt {
+        .bdr {
+            display: flex;
+            flex-wrap: wrap;
+
+            .left_wrp {
+                max-width: 952rem;
+
+                @include laptop {
+                    max-width: 800rem;
+                    flex: 2;
+                }
+            }
+
+            .right_wrp {
+                flex: 1;
+
+                .linksCntt {
+                    padding-left: 67rem;
+                    padding-top: 53rem;
+                    background: rgba($black, 0.6);
+                    border-radius: 0 15px 15px 0;
+                    margin-left: -10px;
+                    padding-right: 40rem;
+                    padding-bottom: 53rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+
+                    .items {
+                        max-width: max-content;
+
+                        a {
+                            display: block;
+                        }
+
+                        .linksGroup {
+                            padding: 8px 12px;
+                            background: rgba($black, 0.6);
+                            border-radius: 6px;
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+
+                            .text {
+                                font-style: normal;
+                                font-weight: 800;
+                                @include size12;
+                                line-height: 1;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: $white;
+                            }
+
+                            .Icon {
+                                &.img {
+                                    width: 9px;
+                                    height: 9px;
+                                }
+
+                                img {
+                                    height: 9px !important;
+                                    vertical-align: top;
+                                    width: 9px;
+                                }
+
+                                svg {
+                                    width: 15px;
+                                    height: 15px;
+                                    fill: currentColor;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .imgCntt {
+                    height: 100%;
+                    margin-left: -120px;
+                    border-radius: 0 15px 15px 0px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100% !important;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .inner {
+                border-radius: 15px;
+                background: $white;
+                padding-top: 63rem;
+                padding-right: 105rem;
+                padding-left: 53rem;
+                padding-bottom: 75rem;
+                height: 100%;
+                position: relative;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+
+                @include tabletMid {
+                    padding: 40px;
+                }
+
+                @include tabletvert {
+                    padding: 30px;
+                }
+
+                .img {
+                    max-width: 160px;
+                    margin-bottom: 59rem;
+                    width: 100%;
+                }
+
+                .intro_content.center {
+                    max-width: 100%;
+                    color: $charcoal;
+                    margin: 0;
+                    text-align: left;
+                }
+
+                .intro_content {
+                    .intro_btn_wrap {
+                        justify-content: flex-start;
+                        margin-top: 53rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tabletMid {
+
+    .u4m-content-with-sidebar {
+        .btmCntt {
+            .bdr {
+                flex-direction: column;
+                border-radius: 15px;
+                overflow: hidden;
+
+                .left_wrp {
+                    max-width: 100%;
+                    width: 100%;
+                    flex: unset;
+                }
+
+                .right_wrp {
+                    .linksCntt {
+                        margin: 0;
+                        border-radius: 0;
+                        padding: 40rem;
+                        flex-direction: unset;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
+                    .imgCntt {
+                        margin: 0;
+                        border-radius: 0;
+                    }
+                }
+
+                .inner {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+}

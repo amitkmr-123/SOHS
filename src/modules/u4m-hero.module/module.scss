@@ -1,6 +1,31 @@
 @import "../../css/_module-imports";
 
 .u4m-hero {
+    padding-left: 105rem;
+    padding-right: 105rem;
+
+    @include laptop {
+        padding-left: 50rem;
+        padding-right: 50rem;
+    }
+
+    @include tabletMid {
+        padding-left: 30rem;
+        padding-right: 30rem;
+    }
+
+    @include tabletvert {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .bg_overlay.bg_image {
+        border: 0.75px solid $white;
+        border-radius: 15px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+
     .intro_content {
         .eyebrow_text {
             color: $SunbeamYellow;

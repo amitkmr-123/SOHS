@@ -1,0 +1,91 @@
+@import "../../css/_module-imports";
+
+.u4m-top-bar {
+    .topbarInner {
+        border: 0.75px solid $white;
+        border-radius: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        .outerwrp {
+            max-width: 1353px;
+            padding: 0 30px;
+            padding-top: 30px;
+            padding-bottom: 29px;
+            width: 100%;
+            margin: 0 auto;
+
+            .img {
+                width: 160px;
+                display: flex;
+                align-items: center;
+            }
+
+            .flex_row {
+                align-items: center;
+                column-gap: 75px;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+
+                .intro_btn_wrap {
+                    a {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .des {
+                margin: 0;
+                text-align: left;
+
+                p {
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.u4m-top-bar.reverse-text {
+    .des {
+        >* {
+            color: $white;
+        }
+    }
+}
+
+@include laptop {
+
+    .u4m-top-bar {
+        .topbarInner {
+            .outerwrp {
+                .flex_row {
+                    column-gap: 40px;
+                }
+            }
+        }
+    }
+
+}
+
+@include tabletMid {
+
+    .u4m-top-bar {
+        .topbarInner {
+            .outerwrp {
+                .flex_row {
+                    flex-direction: column;
+                    row-gap: 20px;
+                }
+
+                .des {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}

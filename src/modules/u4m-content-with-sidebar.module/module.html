@@ -1,0 +1,116 @@
+{% set moduleName = 'u4m-content-with-sidebar' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+
+
+	<div class="btmCntt">
+		<div class="flx_row">
+			<div class="bdr">
+				<div class="left_wrp">
+					<div class="inner">
+						{% if module.intro_content.include_image %}
+						{% if module.intro_content.image_field.src %}
+						<div class="img">
+							{% set sizeAttrs = 'width="{{ module.intro_content.image_field.width|escape_attr }}" height="{{ module.intro_content.image_field.height|escape_attr }}"' %}
+							{% if module.intro_content.image_field.size_type == 'auto' %}
+							{% set sizeAttrs = 'width="{{ module.intro_content.image_field.width|escape_attr }}" height="{{ module.intro_content.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+							{% elif module.intro_content.image_field.size_type == 'auto_custom_max' %}
+							{% set sizeAttrs = 'width="{{ module.intro_content.image_field.max_width|escape_attr }}" height="{{ module.intro_content.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+							{% endif %}
+							{% set loadingAttr = module.intro_content.image_field.loading != 'disabled' ? 'loading="{{ module.intro_content.image_field.loading|escape_attr }}"' : '' %}
+							<img src="{{ module.intro_content.image_field.src|escape_url }}" alt="{{ module.intro_content.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+						</div>
+						{% endif %}
+						{% endif %}
+						<div class="cnt">
+							{{ macros.introGroup(module.intro_content, module.module_settings) }}
+						</div>
+					</div>
+				</div>
+				<div class="right_wrp"> 
+					{% if  module.right_column_content_group.content_type == "link"%}
+					<div class="linksCntt {{ module.module_settings.right_column_content.background_color }}">
+						{% for item in module.right_column_content_group.normal_links_group %}
+						<div class="items">
+								
+							{% set href = item.link_field.url.href %}
+							{% if href %}
+							{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+							{% set href = "mailto:" + href %}
+							{% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+							{% set href = "tel:" + href %}
+							{% endif %}
+							<a
+								 {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+								 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+								 {% else %}
+								 href="{{ href|escape_url }}"
+								 {% endif %}
+								 {% if item.link_field.open_in_new_tab %}
+								 target="_blank"
+								 {% endif %}
+								 {% if item.link_field.rel %}
+								 rel="{{ item.link_field.rel|escape_attr }}"
+								 {% endif %}
+								 > 	{% endif %}
+								<div class="linksGroup">
+									{% if item.icon_type  == "img"%}
+									<div class="Icon img">
+										{% if item.image.src %}
+										{% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}"' %}
+										{% if item.image.size_type == 'auto' %}
+										{% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+										{% elif item.image.size_type == 'auto_custom_max' %}
+										{% set sizeAttrs = 'width="{{ item.image.max_width|escape_attr }}" height="{{ item.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+										{% endif %}
+										{% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading|escape_attr }}"' : '' %}
+										<img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+										{% endif %}
+									</div>
+									{% elif item.icon_type  == "icon"%}
+									<div class="Icon cmIcon {{ module.module_settings.right_column_content.icon_color }}_clr">
+										{% icon
+    name="{{ item.icon.name }}"
+    style="{{ item.icon.type }}"
+    unicode="{{ item.icon.unicode }}"
+    icon_set="{{ item.icon.icon_set }}"
+  %}
+									</div>
+									{% endif %}
+									<div class="text">
+										{{ item.text }}
+									</div>
+								</div>
+								{% if href %}	</a> {% endif %}
+						</div>
+						{% endfor %}
+					</div>
+					{% elif  module.right_column_content_group.content_type == "image"%}
+					<div class="imgCntt">
+						{% if module.right_column_content_group.image.src %}
+						{% set sizeAttrs = 'width="{{ module.right_column_content_group.image.width|escape_attr }}" height="{{ module.right_column_content_group.image.height|escape_attr }}"' %}
+						{% if module.right_column_content_group.image.size_type == 'auto' %}
+						{% set sizeAttrs = 'width="{{ module.right_column_content_group.image.width|escape_attr }}" height="{{ module.right_column_content_group.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+						{% elif module.right_column_content_group.image.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="{{ module.right_column_content_group.image.max_width|escape_attr }}" height="{{ module.right_column_content_group.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+						{% endif %}
+						{% set loadingAttr = module.right_column_content_group.image.loading != 'disabled' ? 'loading="{{ module.right_column_content_group.image.loading|escape_attr }}"' : '' %}
+						<img src="{{ module.right_column_content_group.image.src|escape_url }}" alt="{{ module.right_column_content_group.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+						{% endif %}
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</section>
+
+
+
+
+
+

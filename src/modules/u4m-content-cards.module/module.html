@@ -16,6 +16,28 @@
 			<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
 				<div class="card_item_inner ">
 					<div class="card_row {{ module.module_settings.card_theme_group.background_color }} {% if module.module_settings.card_theme_group.dark_theme %}lightCnt{% endif %}">
+						{% if item.include_overlay_link %}
+						{% set href = item.overlay_link.url.href %}
+						{% if item.overlay_link.url.type is equalto "EMAIL_ADDRESS" %}
+						{% set href = "mailto:" + href %}
+						{% elif item.overlay_link.url.type is equalto "PHONE_NUMBER" %}
+						{% set href = "tel:" + href %}
+						{% endif %}
+						<a class="overlayLink"
+							 {% if item.overlay_link.url.type is equalto "CALL_TO_ACTION"  %}
+							 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+							 {% else %}
+							 href="{{ href|escape_url }}"
+							 {% endif %}
+							 {% if item.overlay_link.open_in_new_tab %}
+							 target="_blank"
+							 {% endif %}
+							 {% if item.overlay_link.rel %}
+							 rel="{{ item.overlay_link.rel|escape_attr }}"
+							 {% endif %}
+							 >
+						</a>
+						{% endif %}
 						{% if item.image.src %}
 						<div class="card_img" style="background-image: url({{ item.image.src }})">
 						</div>

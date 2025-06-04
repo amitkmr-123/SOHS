@@ -1,91 +1,48 @@
 [ {
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
-  "label" : "Intro Content",
+  "label" : "Left Column Content Group",
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
-    "name" : "include_eyebrow_text",
-    "label" : "Include Eyebrow Text",
+    "id" : "0c188252-c4ff-7266-a18f-da599d6cca04",
+    "name" : "include_image",
+    "label" : "Include Image",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : false
+    "default" : true
   }, {
-    "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
-    "name" : "eyebrow_text",
-    "label" : "Eyebrow Text",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_eyebrow_text",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Eyebrow Text"
-  }, {
-    "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
-    "name" : "include_heading",
-    "label" : "Include Heading",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : false
-  }, {
-    "id" : "aef5e961-e297-2654-68e0-6128687770bf",
-    "name" : "heading_size",
-    "label" : "Heading Size",
+    "id" : "b7b87f30-b8cb-25ae-0bcf-e3041c500659",
+    "name" : "image_field",
+    "label" : "Image",
     "required" : false,
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_heading",
+      "controlling_field_path" : "intro_content.include_image",
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
-    "display" : "select",
-    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
     "display_width" : null,
-    "default" : "h2"
-  }, {
-    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
-    "name" : "heading",
-    "label" : "Heading",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Article Title Goes Here"
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_Charcoal.png",
+      "alt" : "Logo",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 32,
+      "max_width" : 240,
+      "max_height" : 32
+    }
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -95,7 +52,7 @@
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : false
+    "default" : true
   }, {
     "id" : "88e2784a-4cb2-624f-1493-1e017330f5bb",
     "name" : "content_style",
@@ -117,7 +74,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "bodystyle1"
+    "default" : "themeStyle"
   }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
@@ -134,7 +91,7 @@
     },
     "type" : "richtext",
     "display_width" : null,
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+    "default" : "<p>The State of HubSpot report is authored by New Breed, a strategic RevOps and growth partner with deep expertise across the HubSpot platform. As the word’s longest-running elite HubSpot Solutions Partner and ecosystem leader, New Breed brings a unique vantage point: one that combines hands-on experience with implementation, optimization, and digital transformation across hundreds of high-growth organizations.</p>\n<p>This report reflects not only statistical findings but also the real-world patterns, challenges, and innovations we observe daily. Our position as both practitioners and advisors enables us to interpret the data with nuance, and offer insights that are not just informative, but operationally relevant.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -144,7 +101,7 @@
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : false
+    "default" : true
   }, {
     "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
     "name" : "button_group",
@@ -155,7 +112,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "default" : 2
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -200,7 +157,7 @@
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "hs-button"
+      "default" : "hs-sec-btn"
     }, {
       "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
       "name" : "button_text",
@@ -220,7 +177,7 @@
       "show_emoji_picker" : false,
       "type" : "text",
       "display_width" : null,
-      "default" : "Button"
+      "default" : "explore new breed"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
@@ -272,21 +229,8 @@
     "display_width" : null,
     "default" : [ {
       "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
+      "button_style" : "hs-sec-btn",
+      "button_text" : "explore new breed",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -304,32 +248,25 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "include_eyebrow_text" : false,
-    "eyebrow_text" : "Eyebrow Text",
-    "include_heading" : false,
-    "heading_size" : "h2",
-    "heading" : "Article Title Goes Here",
-    "include_content" : false,
-    "content_style" : "bodystyle1",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-    "include_button" : false,
+    "include_image" : true,
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_Charcoal.png",
+      "alt" : "Logo",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 32,
+      "max_width" : 240,
+      "max_height" : 32
+    },
+    "include_content" : true,
+    "content_style" : "themeStyle",
+    "content" : "<p>The State of HubSpot report is authored by New Breed, a strategic RevOps and growth partner with deep expertise across the HubSpot platform. As the word’s longest-running elite HubSpot Solutions Partner and ecosystem leader, New Breed brings a unique vantage point: one that combines hands-on experience with implementation, optimization, and digital transformation across hundreds of high-growth organizations.</p>\n<p>This report reflects not only statistical findings but also the real-world patterns, challenges, and innovations we observe daily. Our position as both practitioners and advisors enables us to interpret the data with nuance, and offer insights that are not just informative, but operationally relevant.</p>",
+    "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_text" : "Button",
+      "button_style" : "hs-sec-btn",
+      "button_text" : "explore new breed",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -342,169 +279,69 @@
     } ]
   }
 }, {
-  "id" : "db54579f-5091-9ef4-9d52-f83b6e04d727",
-  "name" : "card_group",
-  "label" : "Card Group",
+  "id" : "0de0dfa9-54f3-3774-8ca9-d8ba8ac8d890",
+  "name" : "right_column_content_group",
+  "label" : "Right Column Content Group",
   "required" : false,
   "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : 4,
-    "sorting_label_field" : "7185180c-84c2-2a99-9957-ebd15149832a",
-    "default" : 2
-  },
   "children" : [ {
-    "id" : "5081390b-6027-5b34-52c9-8a25ed745310",
-    "name" : "include_overlay_link",
-    "label" : "Include Overlay Link",
+    "id" : "1f0ca14e-3033-96d8-da65-3d853fb695ff",
+    "name" : "content_type",
+    "label" : "Content Type",
     "required" : false,
     "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
+    "display" : "select",
+    "choices" : [ [ "link", "Link" ], [ "image", "Image" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
     "display_width" : null,
-    "default" : false
+    "default" : "link"
   }, {
-    "id" : "2cbe916b-7bab-1cd6-52c2-9dd10f878dfc",
-    "name" : "overlay_link",
-    "label" : "Overlay Link",
+    "id" : "2e426fbf-f7f1-d3a0-cf8e-1bf8b0a2ceb4",
+    "name" : "normal_links_group",
+    "label" : "Normal Links Group",
     "required" : false,
     "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "d82b4f5c-738e-fafd-5b0a-82549276c697",
+      "default" : 10
+    },
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "card_group.include_overlay_link",
-      "controlling_value_regex" : "true",
+      "controlling_field_path" : "right_column_content_group.content_type",
+      "controlling_value_regex" : "link",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "display_width" : null,
-    "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "id" : "705ca158-031e-c2e4-dab5-15dadc88ae2e",
-    "name" : "image",
-    "label" : "Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "display_width" : null,
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
-      "alt" : "Frame 32",
-      "loading" : "lazy",
-      "width" : 446,
-      "height" : 446,
-      "max_width" : 446,
-      "max_height" : 446
-    }
-  }, {
-    "id" : "7185180c-84c2-2a99-9957-ebd15149832a",
-    "name" : "title",
-    "label" : "Title",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Lorem Ipsum Two Line Title Here."
-  }, {
-    "id" : "c73d35f7-76a1-d246-9ce6-5424de703ea7",
-    "name" : "include_description",
-    "label" : "Include Description",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : true
-  }, {
-    "id" : "080c13ab-0302-c60d-5b80-1a070b902d8c",
-    "name" : "description",
-    "label" : "Description",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "card_group.include_description",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit."
-  }, {
-    "id" : "4d664c4b-afc9-0760-11cc-db0aedb548bb",
-    "name" : "mark_podcast",
-    "label" : "Mark Podcast",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : true
-  }, {
-    "id" : "01319437-4f64-b609-0a14-5f613be04a1c",
-    "name" : "tag",
-    "label" : "Tag",
-    "required" : false,
-    "locked" : false,
     "children" : [ {
-      "id" : "d5023ca2-73e6-3f7b-2c0d-5b4dfcc9bedd",
-      "name" : "tag_name",
-      "label" : "Tag Name",
-      "required" : false,
-      "locked" : false,
-      "validation_regex" : "",
-      "allow_new_line" : false,
-      "show_emoji_picker" : false,
-      "type" : "text",
-      "display_width" : null,
-      "default" : "insights"
-    }, {
-      "id" : "7bf5dd18-35c9-4e5a-d556-bf2f987fc430",
-      "name" : "select_icon_type",
-      "label" : "Select Icon Type",
+      "id" : "230ac3c0-63d5-3b50-353c-e091ea6bb015",
+      "name" : "icon_type",
+      "label" : "Icon Type",
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "image", "Image" ], [ "icon", "Icon" ] ],
+      "choices" : [ [ "img", "Image" ], [ "icon", "Icon" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "image"
+      "default" : "img"
     }, {
-      "id" : "fa9e0457-b982-9b9e-714e-ced657d07662",
+      "id" : "69d6c810-2494-5839-37ea-bec0f9f53a74",
       "name" : "image",
       "label" : "Image",
       "required" : false,
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
-        "controlling_field_path" : "card_group.tag.select_icon_type",
-        "controlling_value_regex" : "image",
+        "controlling_field_path" : "right_column_content_group.normal_links_group.icon_type",
+        "controlling_value_regex" : "img",
         "property" : null,
         "operator" : "EQUAL",
         "access" : null
@@ -516,162 +353,51 @@
       "display_width" : null,
       "default" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/bulb-icon.png",
-        "alt" : "bulb-icon",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
         "loading" : "lazy",
-        "width" : 20,
-        "height" : 20,
-        "max_width" : 20,
-        "max_height" : 20
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
       }
     }, {
-      "id" : "d1c0178d-d367-313c-6503-93d609535da1",
-      "name" : "icon_field",
+      "id" : "cd5812df-d5db-2fb8-bac9-0272f896a739",
+      "name" : "icon",
       "label" : "Icon",
       "required" : false,
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
-        "controlling_field_path" : "card_group.tag.select_icon_type",
+        "controlling_field_path" : "right_column_content_group.normal_links_group.icon_type",
         "controlling_value_regex" : "icon",
         "property" : null,
         "operator" : "EQUAL",
         "access" : null
       },
-      "icon_set" : "fontawesome-5.14.0",
+      "icon_set" : "fontawesome-6.4.2",
       "type" : "icon",
       "display_width" : null,
-      "default" : {
-        "name" : "Lightbulb",
-        "unicode" : "f0eb",
-        "type" : "SOLID"
-      }
+      "default" : { }
     }, {
-      "id" : "037e4a7f-d387-9472-8346-aa5c286afcd3",
-      "name" : "icon_color",
-      "label" : "Icon Color",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "card_group.tag.select_icon_type",
-        "controlling_value_regex" : "icon",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "type" : "color",
-      "display_width" : null,
-      "default" : {
-        "color" : null,
-        "opacity" : null
-      }
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "tag_name" : "insights",
-      "select_icon_type" : "image",
-      "image" : {
-        "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/bulb-icon.png",
-        "alt" : "bulb-icon",
-        "loading" : "lazy",
-        "width" : 20,
-        "height" : 20,
-        "max_width" : 20,
-        "max_height" : 20
-      },
-      "icon_field" : {
-        "name" : "Lightbulb",
-        "unicode" : "f0eb",
-        "type" : "SOLID"
-      },
-      "icon_color" : {
-        "color" : null,
-        "opacity" : null
-      }
-    }
-  }, {
-    "id" : "e17ab525-f33c-2250-5bdd-24935bde41c9",
-    "name" : "button_group",
-    "label" : "Button Group",
-    "required" : false,
-    "locked" : false,
-    "children" : [ {
-      "id" : "5e0774bf-f1cf-7b17-85a5-2ffdc7e06b78",
-      "name" : "button_type",
-      "label" : "Button Type",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "std"
-    }, {
-      "id" : "51f461dc-896a-1a32-6c87-27c59df08437",
-      "name" : "button_style",
-      "label" : "Button Style",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "card_group.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "hs-sec-btn"
-    }, {
-      "id" : "47c17527-3027-4a9f-3a9a-059e338d4045",
-      "name" : "button_text",
-      "label" : "Button Text",
+      "id" : "d82b4f5c-738e-fafd-5b0a-82549276c697",
+      "name" : "text",
+      "label" : "Text",
       "required" : false,
       "locked" : false,
       "validation_regex" : "",
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "card_group.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
       "display_width" : null,
-      "default" : "click to read this content"
+      "default" : "revenue operations"
     }, {
-      "id" : "92507d83-3637-c4d2-34aa-d6edf47073bb",
-      "name" : "link",
+      "id" : "52333364-e94d-b342-5450-287560990bdb",
+      "name" : "link_field",
       "label" : "Link",
       "required" : false,
       "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "card_group.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
       "show_advanced_rel_options" : false,
       "type" : "link",
       "display_width" : null,
@@ -684,33 +410,27 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    }, {
-      "id" : "fe4c329b-cb1a-919a-c169-76fbb3106b8c",
-      "name" : "cta",
-      "label" : "CTA",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "card_group.button_group.button_type",
-        "controlling_value_regex" : "cta",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "type" : "cta",
-      "display_width" : null
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "display_width" : null,
-    "default" : {
-      "button_type" : "std",
-      "button_style" : "hs-sec-btn",
-      "button_text" : "click to read this content",
-      "link" : {
+    "default" : [ {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
         "url" : {
           "content_id" : null,
           "type" : "EXTERNAL",
@@ -719,6 +439,242 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "bc5d9b68-a9c8-b8ec-49e1-6604f69e7134",
+    "name" : "image",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "right_column_content_group.content_type",
+      "controlling_value_regex" : "image",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%20119.png",
+      "alt" : "Frame 119",
+      "loading" : "lazy",
+      "width" : 867,
+      "height" : 768,
+      "max_width" : 867,
+      "max_height" : 768
     }
   } ],
   "tab" : "CONTENT",
@@ -726,45 +682,23 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "display_width" : null,
-  "default" : [ {
-    "image" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
-      "alt" : "Frame 32",
-      "loading" : "lazy",
-      "width" : 446,
-      "height" : 446,
-      "max_width" : 446,
-      "max_height" : 446
-    },
-    "title" : "Lorem Ipsum Two Line Title Here.",
-    "include_description" : true,
-    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.",
-    "mark_podcast" : true,
-    "tag" : {
-      "tag_name" : "insights",
-      "select_icon_type" : "image",
+  "default" : {
+    "content_type" : "link",
+    "normal_links_group" : [ {
+      "icon_type" : "img",
       "image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/bulb-icon.png",
-        "alt" : "bulb-icon",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
         "loading" : "lazy",
-        "width" : 20,
-        "height" : 20,
-        "max_width" : 20,
-        "max_height" : 20
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
       },
-      "icon_field" : {
-        "name" : "Lightbulb",
-        "unicode" : "f0eb",
-        "type" : "SOLID"
-      }
-    },
-    "button_group" : {
-      "button_type" : "std",
-      "button_style" : "hs-sec-btn",
-      "button_text" : "click to read this content",
-      "link" : {
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
         "url" : {
           "content_id" : null,
           "type" : "EXTERNAL",
@@ -773,56 +707,21 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    },
-    "include_overlay_link" : false,
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "image" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
-      "alt" : "Frame 32",
-      "loading" : "lazy",
-      "width" : 446,
-      "height" : 446,
-      "max_width" : 446,
-      "max_height" : 446
-    },
-    "title" : "Lorem Ipsum Two Line Title Here.",
-    "include_description" : true,
-    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.",
-    "mark_podcast" : true,
-    "tag" : {
-      "tag_name" : "insights",
-      "select_icon_type" : "image",
+    }, {
+      "icon_type" : "img",
       "image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/bulb-icon.png",
-        "alt" : "bulb-icon",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
         "loading" : "lazy",
-        "width" : 20,
-        "height" : 20,
-        "max_width" : 20,
-        "max_height" : 20
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
       },
-      "icon_field" : {
-        "name" : "Lightbulb",
-        "unicode" : "f0eb",
-        "type" : "SOLID"
-      }
-    },
-    "button_group" : {
-      "button_type" : "std",
-      "button_style" : "hs-sec-btn",
-      "button_text" : "click to read this content",
-      "link" : {
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
         "url" : {
           "content_id" : null,
           "type" : "EXTERNAL",
@@ -831,18 +730,202 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    },
-    "include_overlay_link" : false,
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
       },
-      "open_in_new_tab" : false,
-      "no_follow" : false
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/filters.png",
+        "alt" : "filters",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      },
+      "icon" : { },
+      "text" : "revenue operations",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%20119.png",
+      "alt" : "Frame 119",
+      "loading" : "lazy",
+      "width" : 867,
+      "height" : 768,
+      "max_width" : 867,
+      "max_height" : 768
     }
-  } ]
+  }
 }, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
   "name" : "module_settings",
@@ -854,7 +937,7 @@
     "name" : "intro_content_alignment",
     "label" : "Intro Content Alignment",
     "required" : false,
-    "locked" : false,
+    "locked" : true,
     "display" : "select",
     "choices" : [ [ "left", "Left" ], [ "right", "Right" ], [ "center", "Center" ] ],
     "multiple" : false,
@@ -864,35 +947,25 @@
     "display_width" : null,
     "default" : "center"
   }, {
-    "id" : "0cad7724-1b6e-973f-741c-3fe73c5ba9da",
-    "name" : "card_theme_group",
-    "label" : "Card Theme Group",
+    "id" : "ec935bc4-1677-8d57-738a-ce73186c74e9",
+    "name" : "right_column_content",
+    "label" : "Right Column Group ",
     "required" : false,
     "locked" : false,
     "children" : [ {
-      "id" : "bd6e4dab-7547-6fb1-7dd1-5cad2f9990f2",
-      "name" : "background_color",
-      "label" : "Background Color",
+      "id" : "61bec568-a335-b68e-9d49-71492b7f82ff",
+      "name" : "icon_color",
+      "label" : "Icon Color",
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "purple_bg", "Purple" ], [ "lightblack_bg", "Light Black" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+      "choices" : [ [ "purple", "Purple" ], [ "lightblack", "Light Black" ], [ "Black", "Black" ], [ "White", "White" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "lightblack_bg"
-    }, {
-      "id" : "3c313374-de59-95e7-a0f5-7d10b1f21061",
-      "name" : "dark_theme",
-      "label" : "Dark Theme",
-      "required" : false,
-      "locked" : false,
-      "display" : "checkbox",
-      "type" : "boolean",
-      "display_width" : null,
-      "default" : true
+      "default" : "lightblack"
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -900,8 +973,7 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
-      "background_color" : "lightblack_bg",
-      "dark_theme" : true
+      "icon_color" : "lightblack"
     }
   } ],
   "tab" : "CONTENT",
@@ -911,9 +983,8 @@
   "display_width" : null,
   "default" : {
     "intro_content_alignment" : "center",
-    "card_theme_group" : {
-      "background_color" : "lightblack_bg",
-      "dark_theme" : true
+    "right_column_content" : {
+      "icon_color" : "lightblack"
     }
   }
 }, {
@@ -1198,7 +1269,7 @@
     "name" : "reverse_text",
     "label" : "Dark Theme",
     "required" : false,
-    "locked" : false,
+    "locked" : true,
     "visibility" : {
       "controlling_field" : "enable_overrides",
       "controlling_field_path" : null,
@@ -1210,7 +1281,7 @@
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : true
+    "default" : false
   }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
@@ -1302,7 +1373,8 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "display_width" : null
+      "display_width" : null,
+      "default" : "purple_bg"
     }, {
       "id" : "0f1d99f5-31a8-7b34-766a-1f40497d8b7c",
       "name" : "custom_color",
@@ -1338,6 +1410,7 @@
         "loading" : "lazy"
       },
       "include_overlay" : false,
+      "select_color" : "purple_bg",
       "custom_color" : {
         "color" : null,
         "opacity" : null
@@ -1385,7 +1458,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 1440
+    "default" : 1447
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -1406,7 +1479,7 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 75,
     "custom_bottom_padding_mobile" : 50,
-    "reverse_text" : true,
+    "reverse_text" : false,
     "background_settings" : {
       "background_type" : "color",
       "background_image" : {
@@ -1416,12 +1489,13 @@
         "loading" : "lazy"
       },
       "include_overlay" : false,
+      "select_color" : "purple_bg",
       "custom_color" : {
         "color" : null,
         "opacity" : null
       }
     },
     "container_size" : "custom",
-    "custom_container_size" : 1440
+    "custom_container_size" : 1447
   }
 } ]

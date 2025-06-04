@@ -1,18 +1,30 @@
-{% set moduleName = 'u4m-hero' %}
-{% include "../partials/u4-module-includes.html" %}
 
-<div class="page-center {{ module.module_overrides.container_size }}" >
-	
-	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
- 
+<div class="HeroContainer {{name}}">
 
+	{% set moduleName = 'u4m-hero' %}
+	{% include "../partials/u4-module-includes.html" %}
+
+
+	<div class="page-center {{ module.module_overrides.container_size }}" >
+
+		{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+
+
+	</div>
+
+	</section>
 </div>
-</section>
+
 
 {% require_css %}
 <style>
 	.u4m-hero.{{name}} .intro_content{
 		max-width:{{ module.module_settings.intro_content_container }}px ;
+	}
+	.{{name}}.HeroContainer{
+		max-width:{{ module.module_overrides.outer_container_size }}px;
+		padding:0 20rem;
+		margin: 0 auto;
 	}
 </style>
 {% end_require_css %}

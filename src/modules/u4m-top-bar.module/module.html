@@ -1,0 +1,37 @@
+{% set moduleName = 'u4m-top-bar' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	<div class="topbarInner {{ module.module_settings.inner_container_group.select_color }} ">
+				<div class="outerwrp">
+		<div class="flex_row">
+			<div class="img">
+				{% if module.intro_content.image.src %}
+				{% set sizeAttrs = 'width="{{ module.intro_content.image.width|escape_attr }}" height="{{ module.intro_content.image.height|escape_attr }}"' %}
+				{% if module.intro_content.image.size_type == 'auto' %}
+				{% set sizeAttrs = 'width="{{ module.intro_content.image.width|escape_attr }}" height="{{ module.intro_content.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% elif module.intro_content.image.size_type == 'auto_custom_max' %}
+				{% set sizeAttrs = 'width="{{ module.intro_content.image.max_width|escape_attr }}" height="{{ module.intro_content.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% endif %}
+				{% set loadingAttr = module.intro_content.image.loading != 'disabled' ? 'loading="{{ module.intro_content.image.loading|escape_attr }}"' : '' %}
+				<img src="{{ module.intro_content.image.src|escape_url }}" alt="{{ module.intro_content.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+				{% endif %}
+			</div>
+			<div class="des {{ module.intro_content.content_style }}">
+				{{ module.intro_content.content }}
+			</div>
+			<div class="btn">
+				{{ macros.singlebuttonGroup(module.intro_content.button_group) }} 
+			</div>
+		</div>
+			</div>
+	</div>
+
+
+</div>
+</section>
+
+
+
+
