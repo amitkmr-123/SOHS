@@ -1187,7 +1187,7 @@
         "alt" : null,
         "loading" : "lazy"
       }
-    },  {
+    }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
@@ -1243,7 +1243,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "select_color" : "White_bg",
       "custom_color" : {
         "color" : null,
@@ -1329,7 +1328,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 1093
+    "default" : 1133
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -1359,7 +1358,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "select_color" : "White_bg",
       "custom_color" : {
         "color" : null,
@@ -1370,6 +1368,6 @@
       "select_color" : "Ice_bg"
     },
     "container_size" : "custom",
-    "custom_container_size" : 1093
+    "custom_container_size" : 1133
   }
 } ]

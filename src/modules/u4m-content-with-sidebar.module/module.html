@@ -9,7 +9,7 @@
 		<div class="flx_row">
 			<div class="bdr">
 				<div class="left_wrp">
-					<div class="inner">
+					<div class="inner {% if module.module_settings.left_column_group.dark_theme %}lightCntt{% endif %} {{ module.module_settings.left_column_group.select_bg }}">
 						{% if module.intro_content.include_image %}
 						{% if module.intro_content.image_field.src %}
 						<div class="img">
@@ -25,16 +25,62 @@
 						{% endif %}
 						{% endif %}
 						<div class="cnt">
-							{{ macros.introGroup(module.intro_content, module.module_settings) }}
+							{% if module.intro_content.include_content or  module.intro_content.include_button%}
+							<div class="intro_content left">
+								<div class="intro__inner ">
+									{% if module.intro_content.include_content %}
+									<div class="intro_desc {{ module.intro_content.content_style }} {{settings.select_content_bg_color}}">
+										{{ module.intro_content.content }}
+									</div>
+									{% endif %}
+									{% if module.intro_content.include_button %}
+									<div class="intro_btn_wrap">
+										{% for item in module.intro_content.button_group %}
+										<div class="btn_item">
+											{% if item.button_type == "std" %}
+											{% set href = item.link.url.href %}
+											{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+											{% set href = "mailto:" + href %}
+											{% endif %}
+											<a class=" {{ item.button_style ? item.button_style : "hs-button" }}"
+												 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+												 href="{{ href }}" 
+												 {% else %}
+												 href="{{ href }}"
+												 {% endif %}
+												 {% if item.link.open_in_new_tab %}
+												 target="_blank"
+												 {% endif %}
+												 {% if item.link.rel %}
+												 rel="{{ item.link.rel }}"
+												 {% endif %}>
+												<span>{{ item.button_text }}</span> 
+												{% if item.button_style == "hs-arrow-btn" %}<span class="arrow_icon"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3 1H8V6" stroke="#94EFF6" stroke-width="1.2" stroke-linecap="round"/>
+												<path d="M8 1L1 8" stroke="#94EFF6" stroke-width="1.2" stroke-linecap="round"/>
+												</svg>
+												</span>{% endif %}
+											</a>
+											{% endif %}
+											{% if item.button_type == "cta" %}
+											{% cta guid="{{ item.cta }}" %}
+											{% endif %}
+										</div>
+										{% endfor %}
+									</div>
+									{% endif %}
+								</div>
+							</div>
+							{% endif %}
 						</div>
 					</div>
 				</div>
 				<div class="right_wrp"> 
 					{% if  module.right_column_content_group.content_type == "link"%}
-					<div class="linksCntt {{ module.module_settings.right_column_content.background_color }}">
+					<div class="linksCntt {% if module.module_settings.right_column_content.dark_theme %}lightCntt{% endif %} {{ module.module_settings.right_column_content.select_bg }} {{ module.module_settings.right_column_content.background_color }}">
 						{% for item in module.right_column_content_group.normal_links_group %}
 						<div class="items">
-								
+
 							{% set href = item.link_field.url.href %}
 							{% if href %}
 							{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}

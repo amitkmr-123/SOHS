@@ -21,9 +21,12 @@
                 flex: 1;
 
                 .linksCntt {
+                    &.lightblack_bg {
+                        background: rgba($black, 0.6);
+                    }
+
                     padding-left: 67rem;
                     padding-top: 53rem;
-                    background: rgba($black, 0.6);
                     border-radius: 0 15px 15px 0;
                     margin-left: -10px;
                     padding-right: 40rem;
@@ -31,6 +34,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 14px;
+                    height: 100%;
 
                     .items {
                         max-width: max-content;
@@ -97,16 +101,78 @@
 
             .inner {
                 border-radius: 15px;
-                background: $white;
                 padding-top: 63rem;
                 padding-right: 105rem;
                 padding-left: 53rem;
                 padding-bottom: 75rem;
                 height: 100%;
                 position: relative;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
+
+                .intro_desc>* {
+                    color: $charcoal;
+                }
+
+                .intro_content {
+                    .intro_btn_wrap {
+                        .hs-arrow-btn {
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                            color: $charcoal;
+                            font-weight: 700;
+                            @include size14;
+                            line-height: 1.14285714;
+                            letter-spacing: 0.15em;
+                            text-transform: uppercase;
+
+                            .arrow_icon {
+                                width: 9px;
+                                height: 9px;
+                                display: flex;
+                                align-items: center;
+                                transition: all .1s ease;
+
+                                svg {
+                                    width: 100%;
+                                    height: 100%;
+
+                                    path {
+                                        stroke: $purple;
+                                    }
+                                }
+
+                            }
+
+                            &:hover {
+                                .arrow_icon {
+                                    transform: translate(2px, -2px);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.lightCntt {
+                    .intro_desc>* {
+                        color: $white;
+                    }
+
+                    .intro_content {
+                        .intro_btn_wrap {
+                            .hs-arrow-btn {
+                                color: $white;
+
+                                .arrow_icon {
+                                    svg {
+                                        path {
+                                            stroke: $lightturquoise;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
                 @include tabletMid {
                     padding: 40px;
@@ -163,6 +229,7 @@
                         flex-direction: unset;
                         flex-wrap: wrap;
                         justify-content: center;
+                        height: 100%;
                     }
 
                     .imgCntt {
