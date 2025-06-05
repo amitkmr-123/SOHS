@@ -102,6 +102,12 @@
   }
 }
 
+@mixin laptopvertExtraLarge {
+  @media (max-width: 1700px) {
+    @content;
+  }
+}
+
 @mixin laptopvertLarge {
   @media (max-width: 1660px) {
     @content;
@@ -133,7 +139,9 @@
 }
 
 @mixin ie {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
     @content;
   }
 }

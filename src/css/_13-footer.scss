@@ -1,7 +1,7 @@
 .ftr {
     background: rgba($black, 0.6);
-    padding-top: 66rem;
-    padding-bottom: 59rem;
+    padding-top: 57rem;
+    padding-bottom: 56rem;
 
     .page-center {
         max-width: 1484rem;
@@ -49,6 +49,7 @@
                             letter-spacing: 0.15em;
                             text-transform: uppercase;
                             color: $white;
+                            font-family: $font2;
 
                             &:empty {
                                 display: none;
@@ -83,6 +84,12 @@
                                     white-space: normal;
                                     align-items: center;
                                     overflow: visible;
+                                    font-family: $font2;
+
+                                    &:hover {
+                                        text-decoration: underline;
+
+                                    }
 
                                     span {
                                         flex-shrink: 0;
@@ -111,6 +118,7 @@
             flex: 1;
             display: flex;
             gap: 21px;
+            align-items: center;
 
             p {
                 margin-bottom: 24px;
