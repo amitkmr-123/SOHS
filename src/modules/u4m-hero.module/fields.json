@@ -117,7 +117,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "bodystyle1"
+    "default" : "themeStyle"
   }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
@@ -297,7 +297,7 @@
     "heading_size" : "h1",
     "heading" : "Dropping 09.05.2025",
     "include_content" : true,
-    "content_style" : "bodystyle1",
+    "content_style" : "themeStyle",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim condimentum nunc ut ornare. Suspendisse consequat lectus libero, at fermentum</p>",
     "include_button" : true,
     "button_group" : [ {
@@ -709,7 +709,7 @@
         "max_width" : 2000,
         "max_height" : 699.2248062015503
       }
-    },  {
+    }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
@@ -769,7 +769,6 @@
         "max_width" : 2000,
         "max_height" : 699.2248062015503
       },
-      "include_overlay" : false,
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
@@ -782,6 +781,14 @@
     "label" : "Outer Container Size",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "display" : "slider",
     "min" : 900,
     "max" : 2200,
@@ -865,7 +872,6 @@
         "max_width" : 2000,
         "max_height" : 699.2248062015503
       },
-      "include_overlay" : false,
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,

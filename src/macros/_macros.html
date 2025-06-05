@@ -63,6 +63,7 @@
 			 rel="{{ item.link.rel }}"
 			 {% endif %}>
 			<span>{{ item.button_text }}</span> 
+			{% if item.button_style == "hs-arrow-btn" %}<span class="arrow_icon">→</span>{% endif %}
 		</a>
 		{% endif %}
 		{% endif %}

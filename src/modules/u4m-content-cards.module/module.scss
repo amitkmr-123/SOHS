@@ -116,6 +116,12 @@
                         }
                     }
                 }
+
+                .btn_item {
+                    a.hs-arrow-btn {
+                        color: $white;
+                    }
+                }
             }
         }
 
@@ -152,6 +158,10 @@
                 .btn_item {
                     a {
                         margin: 0;
+
+                        &.hs-arrow-btn {
+                            color: $charcoal;
+                        }
                     }
 
                     margin-top: 30px;

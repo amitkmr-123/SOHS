@@ -4,28 +4,62 @@
 <div class="page-center {{ module.module_overrides.container_size }}" >
 
 	<div class="topbarInner {{ module.module_settings.inner_container_group.select_color }} ">
-				<div class="outerwrp">
-		<div class="flex_row">
-			<div class="img">
-				{% if module.intro_content.image.src %}
-				{% set sizeAttrs = 'width="{{ module.intro_content.image.width|escape_attr }}" height="{{ module.intro_content.image.height|escape_attr }}"' %}
-				{% if module.intro_content.image.size_type == 'auto' %}
-				{% set sizeAttrs = 'width="{{ module.intro_content.image.width|escape_attr }}" height="{{ module.intro_content.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-				{% elif module.intro_content.image.size_type == 'auto_custom_max' %}
-				{% set sizeAttrs = 'width="{{ module.intro_content.image.max_width|escape_attr }}" height="{{ module.intro_content.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-				{% endif %}
-				{% set loadingAttr = module.intro_content.image.loading != 'disabled' ? 'loading="{{ module.intro_content.image.loading|escape_attr }}"' : '' %}
-				<img src="{{ module.intro_content.image.src|escape_url }}" alt="{{ module.intro_content.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-				{% endif %}
-			</div>
-			<div class="des {{ module.intro_content.content_style }}">
-				{{ module.intro_content.content }}
-			</div>
-			<div class="btn">
-				{{ macros.singlebuttonGroup(module.intro_content.button_group) }} 
+		<div class="outerwrp">
+			<div class="flex_row">
+				<div class="img">
+					{% if module.intro_content.image.src %}
+					{% set sizeAttrs = 'width="{{ module.intro_content.image.width|escape_attr }}" height="{{ module.intro_content.image.height|escape_attr }}"' %}
+					{% if module.intro_content.image.size_type == 'auto' %}
+					{% set sizeAttrs = 'width="{{ module.intro_content.image.width|escape_attr }}" height="{{ module.intro_content.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% elif module.intro_content.image.size_type == 'auto_custom_max' %}
+					{% set sizeAttrs = 'width="{{ module.intro_content.image.max_width|escape_attr }}" height="{{ module.intro_content.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = module.intro_content.image.loading != 'disabled' ? 'loading="{{ module.intro_content.image.loading|escape_attr }}"' : '' %}
+					<img src="{{ module.intro_content.image.src|escape_url }}" alt="{{ module.intro_content.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+					{% endif %}
+				</div>
+				<div class="des {{ module.intro_content.content_style }}">
+					{{ module.intro_content.content }}
+				</div>
+				<div class="btn">
+					<div class="intro_btn_wrap">
+						<div class="btn_item">
+							{% if module.intro_content.button_group.button_type == "std" %}
+							{% set href = module.intro_content.button_group.link.url.href %}
+							{% if module.intro_content.button_group.link.url.type is equalto "EMAIL_ADDRESS" %}
+							{% set href = "mailto:" + href %}
+							{% elif module.intro_content.button_group.link.url.type is equalto "PHONE_NUMBER" %}
+							{% set href = "tel:" + href %}
+							{% endif %}
+							<a class="{{ module.intro_content.button_group.button_style ? module.intro_content.button_group.button_style : "hs-button" }} "
+								 {% if module.intro_content.button_group.link.url.type is equalto "CALL_TO_ACTION"  %}
+								 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+								 {% else %}
+								 href="{{ href|escape_url }}"
+								 {% endif %}
+								 {% if module.intro_content.button_group.link.open_in_new_tab %}
+								 target="_blank"
+								 {% endif %}
+								 {% if module.intro_content.button_group.link.rel %}
+								 rel="{{ module.intro_content.button_group.link.rel|escape_attr }}"
+								 {% endif %}>
+								<span>{{ module.intro_content.button_group.button_text }}</span> 
+								{% if module.intro_content.button_group.button_style == "hs-arrow-btn" %}<span class="arrow_icon"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 1H8V6" stroke="#94EFF6" stroke-width="1.2" stroke-linecap="round"/>
+								<path d="M8 1L1 8" stroke="#94EFF6" stroke-width="1.2" stroke-linecap="round"/>
+								</svg>
+								</span>{% endif %}
+							</a>
+							{% endif %}
+							{% endif %}
+							{% if module.intro_content.button_group.button_type == "cta" %}
+							{% cta guid="{{ module.intro_content.button_group.cta }}" %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-			</div>
 	</div>
 
 

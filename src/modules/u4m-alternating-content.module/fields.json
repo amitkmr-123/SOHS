@@ -220,7 +220,7 @@
       "show_emoji_picker" : false,
       "type" : "text",
       "display_width" : null,
-      "default" : "Button"
+      "default" : "click to read this content"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
@@ -273,7 +273,7 @@
     "default" : [ {
       "button_type" : "std",
       "button_style" : "hs-arrow-btn",
-      "button_text" : "Button",
+      "button_text" : "click to read this content",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -303,7 +303,7 @@
     "button_group" : [ {
       "button_type" : "std",
       "button_style" : "hs-arrow-btn",
-      "button_text" : "Button",
+      "button_text" : "click to read this content",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -760,7 +760,7 @@
         "alt" : null,
         "loading" : "lazy"
       }
-    },  {
+    }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
@@ -816,7 +816,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
@@ -895,7 +894,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
