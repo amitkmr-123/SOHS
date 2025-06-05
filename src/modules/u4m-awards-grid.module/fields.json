@@ -1495,7 +1495,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
@@ -1574,7 +1573,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,

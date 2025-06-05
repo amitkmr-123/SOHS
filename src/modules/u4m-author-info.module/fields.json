@@ -1,25 +1,50 @@
 [ {
-  "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
-  "name" : "intro_content",
-  "label" : "Content",
+  "id" : "6795530f-e052-2b5e-fa52-c6a026a52c59",
+  "name" : "use_post_author_info",
+  "label" : "Use Post Author Info",
   "required" : false,
   "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+}, {
+  "id" : "8f6af338-4f2a-2dd7-d190-57745e35b19b",
+  "name" : "author_info",
+  "label" : "Author Info",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "use_post_author_info",
+    "controlling_value_regex" : "false",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
   "children" : [ {
-    "id" : "aef5e961-e297-2654-68e0-6128687770bf",
-    "name" : "heading_size",
-    "label" : "Heading Size",
+    "id" : "9c63d9c6-b46c-0216-cd05-8cf7e2dec782",
+    "name" : "author_image",
+    "label" : "Author Image",
     "required" : false,
     "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
     "display_width" : null,
-    "default" : "h4"
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Avatar.png",
+      "alt" : "Avatar",
+      "loading" : "lazy",
+      "width" : 76,
+      "height" : 106,
+      "max_width" : 76,
+      "max_height" : 106
+    }
   }, {
-    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
+    "id" : "2c05539d-9a96-06c3-e396-6dcc9c087475",
     "name" : "heading",
     "label" : "Heading",
     "required" : false,
@@ -29,13 +54,43 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "display_width" : null,
-    "default" : "Read the full report."
+    "default" : "About the Author"
   }, {
-    "id" : "88e2784a-4cb2-624f-1493-1e017330f5bb",
+    "id" : "4a61d1f3-cbe3-9bf6-fb58-db4aa41fb158",
+    "name" : "heading_size",
+    "label" : "Heading Size",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "author_info.heading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "NOT_EMPTY",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "h4"
+  }, {
+    "id" : "53402ac5-cc4e-fa15-f3a4-9ef4f9da2997",
     "name" : "content_style",
     "label" : "Content Style",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "author_info.content",
+      "controlling_value_regex" : null,
+      "property" : null,
+      "operator" : "NOT_EMPTY",
+      "access" : null
+    },
     "display" : "select",
     "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ] ],
     "multiple" : false,
@@ -45,302 +100,14 @@
     "display_width" : null,
     "default" : "themeStyle"
   }, {
-    "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
+    "id" : "7dc0cd48-c921-e5dc-ca6a-0e9319bc8e3d",
     "name" : "content",
     "label" : "Content",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
     "display_width" : null,
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta.</p>"
-  }, {
-    "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
-    "name" : "button_group",
-    "label" : "Button Group",
-    "required" : false,
-    "locked" : false,
-    "children" : [ {
-      "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "name" : "button_type",
-      "label" : "Button Type",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "std"
-    }, {
-      "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
-      "name" : "button_style",
-      "label" : "Button Style",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "popup", "Popup" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "popup"
-    }, {
-      "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
-      "name" : "button_text",
-      "label" : "Button Text",
-      "required" : false,
-      "locked" : false,
-      "validation_regex" : "",
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "allow_new_line" : false,
-      "show_emoji_picker" : false,
-      "type" : "text",
-      "display_width" : null,
-      "default" : "get the state of hubspot"
-    }, {
-      "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
-      "name" : "link",
-      "label" : "Link",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_style",
-        "controlling_value_regex" : "hs-button|hs-sec-btn",
-        "property" : null,
-        "operator" : "MATCHES_REGEX",
-        "access" : null
-      },
-      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
-      "show_advanced_rel_options" : false,
-      "type" : "link",
-      "display_width" : null,
-      "default" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
-      "name" : "cta",
-      "label" : "CTA",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "cta",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "type" : "cta",
-      "display_width" : null
-    }, {
-      "id" : "3ba45649-4661-71c0-2bac-9b9218208444",
-      "name" : "popup_form",
-      "label" : "Popup Form",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_style",
-        "controlling_value_regex" : "popup",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "children" : [ {
-        "id" : "a4ffce90-735d-5c4a-da44-89d5d7984de7",
-        "name" : "logo",
-        "label" : "Logo",
-        "required" : false,
-        "locked" : false,
-        "responsive" : true,
-        "resizable" : false,
-        "show_loading" : false,
-        "type" : "image",
-        "display_width" : null,
-        "default" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_White.png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        }
-      }, {
-        "id" : "41f3d326-e69b-2a8b-b85f-1b9d826dffe8",
-        "name" : "logo_drk",
-        "label" : "Logo",
-        "required" : false,
-        "locked" : false,
-        "responsive" : true,
-        "resizable" : false,
-        "show_loading" : false,
-        "type" : "image",
-        "display_width" : null,
-        "default" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_Charcoal%20(1).png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        }
-      }, {
-        "id" : "90de2b84-8c5e-34f3-1da6-c190e56d2b00",
-        "name" : "heading",
-        "label" : "Heading",
-        "required" : false,
-        "locked" : false,
-        "validation_regex" : "",
-        "allow_new_line" : false,
-        "show_emoji_picker" : false,
-        "type" : "text",
-        "display_width" : null,
-        "default" : "The state <span>of</span> hubspot"
-      }, {
-        "id" : "8bd8b179-cff9-d459-9126-6a450f833b21",
-        "name" : "content",
-        "label" : "Content",
-        "required" : false,
-        "locked" : false,
-        "type" : "richtext",
-        "display_width" : null,
-        "default" : "<h4>Headline above the form goes here.</h4>"
-      }, {
-        "id" : "73e0b18f-331f-b068-e059-648aa6c78c3f",
-        "name" : "select_form",
-        "label" : "Select Form",
-        "required" : false,
-        "locked" : false,
-        "type" : "form",
-        "display_width" : null,
-        "default" : {
-          "response_type" : "inline",
-          "message" : "Thanks for submitting the form."
-        }
-      }, {
-        "id" : "ede9bd75-be59-b35c-01c5-640f05c8dff0",
-        "name" : "dark_theme",
-        "label" : "Dark Theme",
-        "required" : false,
-        "locked" : false,
-        "display" : "checkbox",
-        "type" : "boolean",
-        "display_width" : null,
-        "default" : true
-      } ],
-      "tab" : "CONTENT",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "logo" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_White.png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        },
-        "logo_drk" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_Charcoal%20(1).png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        },
-        "heading" : "The state <span>of</span> hubspot",
-        "content" : "<h4>Headline above the form goes here.</h4>",
-        "select_form" : {
-          "response_type" : "inline",
-          "message" : "Thanks for submitting the form."
-        },
-        "dark_theme" : true
-      }
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "button_type" : "std",
-      "button_style" : "popup",
-      "button_text" : "get the state of hubspot",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      },
-      "popup_form" : {
-        "logo" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_White.png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        },
-        "logo_drk" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_Charcoal%20(1).png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        },
-        "heading" : "The state <span>of</span> hubspot",
-        "content" : "<h4>Headline above the form goes here.</h4>",
-        "select_form" : {
-          "response_type" : "inline",
-          "message" : "Thanks for submitting the form."
-        },
-        "dark_theme" : true
-      }
-    }
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -348,53 +115,56 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
+    "author_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Avatar.png",
+      "alt" : "Avatar",
+      "loading" : "lazy",
+      "width" : 76,
+      "height" : 106,
+      "max_width" : 76,
+      "max_height" : 106
+    },
+    "heading" : "About the Author",
     "heading_size" : "h4",
-    "heading" : "Read the full report.",
     "content_style" : "themeStyle",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta.</p>",
-    "button_group" : {
-      "button_type" : "std",
-      "button_style" : "popup",
-      "button_text" : "get the state of hubspot",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      },
-      "popup_form" : {
-        "logo" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_White.png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        },
-        "logo_drk" : {
-          "size_type" : "auto",
-          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Logo_Charcoal%20(1).png",
-          "alt" : "Logo",
-          "loading" : "lazy",
-          "width" : 240,
-          "height" : 33,
-          "max_width" : 240,
-          "max_height" : 33
-        },
-        "heading" : "The state <span>of</span> hubspot",
-        "content" : "<h4>Headline above the form goes here.</h4>",
-        "select_form" : {
-          "response_type" : "inline",
-          "message" : "Thanks for submitting the form."
-        },
-        "dark_theme" : true
-      }
-    }
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+  }
+}, {
+  "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
+  "name" : "module_settings",
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "23a01b9e-5fdc-49d1-ff63-f09cfa99ee13",
+    "name" : "include_top_border",
+    "label" : "Include Top Border",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
+    "id" : "9e83262e-770e-2a6c-f42e-121b6b6c9ded",
+    "name" : "include_bottom_border",
+    "label" : "Include Bottom Border",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "include_top_border" : false,
+    "include_bottom_border" : false
   }
 }, {
   "id" : "module_overrides",
@@ -718,7 +488,7 @@
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : ""
+      "default" : "color"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -764,8 +534,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "display_width" : null,
-      "default" : "lightblack_bg"
+      "display_width" : null
     }, {
       "id" : "0f1d99f5-31a8-7b34-766a-1f40497d8b7c",
       "name" : "custom_color",
@@ -793,57 +562,40 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
-      "background_type" : "",
+      "background_type" : "color",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
-      "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
         "opacity" : null
       }
     }
   }, {
-    "id" : "b6fbe444-5b6a-a726-7043-c742b1549981",
-    "name" : "inner_background_settings",
-    "label" : "Inner Background Settings",
+    "id" : "77df1f47-d553-a0a4-5eda-af801220d464",
+    "name" : "select_heading_color",
+    "label" : "Select Heading Color",
     "required" : false,
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "module_overrides.enable_overrides",
-      "controlling_value_regex" : "true",
+      "controlling_field_path" : "module_overrides.background_settings.background_type",
+      "controlling_value_regex" : "color",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
-    "children" : [ {
-      "id" : "5d8c546d-c277-d6fd-7849-734bd165033f",
-      "name" : "select_color",
-      "label" : "Select Color",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "purple_bg", "Purple" ], [ "lightblack_bg", "Light Black" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "lightblack_bg"
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : true,
-    "group_occurrence_meta" : null,
-    "type" : "group",
+    "display" : "select",
+    "choices" : [ [ "purple_bg", "Purple" ], [ "lightblack_bg", "Light Black" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
     "display_width" : null,
-    "default" : {
-      "select_color" : "lightblack_bg"
-    }
+    "default" : ""
   }, {
     "id" : "fc248331-90d9-cb7e-66f6-4b85de179aa9",
     "name" : "container_size",
@@ -865,7 +617,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "theme"
+    "default" : "custom"
   }, {
     "id" : "2106c911-74cd-42f1-af9c-4ef05f436c77",
     "name" : "custom_container_size",
@@ -886,7 +638,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 1000
+    "default" : 1446
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -909,24 +661,20 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : true,
     "background_settings" : {
-      "background_type" : "",
+      "background_type" : "color",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
-      "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
         "opacity" : null
       }
     },
-    "inner_background_settings" : {
-      "select_color" : "lightblack_bg"
-    },
-    "container_size" : "theme",
-    "custom_container_size" : 1000
+    "select_heading_color" : "",
+    "container_size" : "custom",
+    "custom_container_size" : 1446
   }
 } ]

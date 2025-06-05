@@ -394,6 +394,37 @@
   "display_width" : null,
   "default" : "h4"
 }, {
+  "id" : "4e73e62f-936f-6f06-9b3f-ccd5cd7dcbf6",
+  "name" : "select_content_type",
+  "label" : "Select Content Type",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "hubdb", "HubDB" ], [ "custom", "Custom" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "custom"
+}, {
+  "id" : "e6844ff2-d005-8ad6-5e55-1402c1d2285d",
+  "name" : "select_table",
+  "label" : "Select Table",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "select_content_type",
+    "controlling_value_regex" : "hubdb",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "type" : "hubdbtable",
+  "display_width" : null,
+  "default" : 120529772
+}, {
   "id" : "db54579f-5091-9ef4-9d52-f83b6e04d727",
   "name" : "card_group",
   "label" : "Card Group",
@@ -404,6 +435,14 @@
     "max" : 4,
     "sorting_label_field" : "7185180c-84c2-2a99-9957-ebd15149832a",
     "default" : 2
+  },
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "select_content_type",
+    "controlling_value_regex" : "custom",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
   },
   "children" : [ {
     "id" : "705ca158-031e-c2e4-dab5-15dadc88ae2e",

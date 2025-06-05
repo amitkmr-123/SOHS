@@ -1,0 +1,140 @@
+{% set moduleName = 'u4m-event-banner' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	<div class="eventsbanner_inner">
+		<div class="eventsbanner_content">
+			<h6 class="eyebrow_tex event_date">
+				{{ content.publish_date_local_time.strftime|datetimeformat('%B') }} {% set day = content.publish_date_local_time.strftime|datetimeformat('%e') %}
+				{% if day >= 4 and day <= 20 %}
+				{% set day = day + "th" %}
+				{% elif day >= 24 and day <= 30 %}
+				{% set day = day + "th" %}
+				{% elif day == 1 or day == 21 or day == 31 %}
+				{% set day = day + "st" %}
+				{% elif day == 2 or day == 22 %}
+				{% set day = day + "nd" %}
+				{% elif day == 3 or day == 23 %}
+				{% set day = day + "rd" %}
+				{% endif %}
+				{{ day }}, {{ content.publish_date_local_time.strftime|datetimeformat('%Y')}}
+			</h6>
+			<h1 class="banner_tirtle">
+				{{content.name}}
+			</h1>
+
+			<div class="event_bnr_desc">
+				{{ module.description }}
+			</div>
+			<h6 class="eyebrow_author event_date">
+				By {{content.blog_post_author.display_name}}
+			</h6>
+		</div>
+		<div class="audio-player_wrapper">
+
+			<div class="audio-player">
+				<div class="play-btn" onclick="toggleAudio()" id="playBtn"></div>
+				<div class="audio-title">	{{module.select_row.columns.name}}</div>
+				<div class="right-side">
+					<div class="volume-icon" onclick="toggleMute()" id="volumeIcon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><g clip-path="url(#clip0_198_1624)"><path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_198_1624"><rect width="12" height="12" fill="white"/></clipPath></defs></svg>
+					</div>
+					<div class="duration" id="duration">ee</div>
+				</div>
+			</div> 
+
+			<audio id="audio" src="{{ module.select_audio_file }}"></audio>
+
+
+		</div>
+	</div>
+
+</div>
+</section>
+
+<style>
+	.audio-player {
+		display: flex;
+		align-items: center;
+		background-color: #4b25b8;
+		color: white;
+		border-radius: 999px;
+		padding: 10px 20px;
+		width: 100%;
+		max-width: 700px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.play-btn {
+		width: 36px;
+		height: 36px;
+		background: #2a0c6f;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		margin-right: 16px;
+	}
+
+	.play-btn:after {
+		content: "";
+		display: block;
+		border-style: solid;
+		border-width: 8px 0 8px 12px;
+		border-color: transparent transparent transparent white;
+		margin-left: 2px;
+	}
+
+	.audio-title {
+		flex-grow: 1;
+		font-size: 14px;
+		line-height: 1.3;
+	}
+
+	.right-side {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.duration {
+		font-weight: bold;
+	}
+</style>
+
+
+<script>
+	const audio = document.getElementById('audio');
+	const playBtn = document.getElementById('playBtn');
+	const volumeIcon = document.getElementById('volumeIcon');
+
+	function toggleAudio() {
+		if (audio.paused) {
+			audio.play();
+			playBtn.innerHTML = '❚❚';
+			playBtn.classList.add('playBtn');
+		} else {
+			audio.pause();
+			playBtn.innerHTML = '';
+			playBtn.classList.remove('playBtn');
+		}
+	}
+
+	function toggleMute() {
+		audio.muted = !audio.muted;
+		// 			volumeIcon.textContent = audio.muted ? '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><g clip-path="url(#clip0_198_1624)"><path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="3" x2="9" y2="9" stroke="white" stroke-width="1.2" stroke-linecap="round"/></g><defs><clipPath id="clip0_198_1624"><rect width="12" height="12" fill="white"/></clipPath></defs></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><g clip-path="url(#clip0_198_1624)"><path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_198_1624"><rect width="12" height="12" fill="white"/></clipPath></defs></svg>';
+	}
+
+	// Optional: Dynamic duration display
+	audio.addEventListener('loadedmetadata', () => {
+		const minutes = Math.floor(audio.duration / 60);
+		const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
+		document.getElementById('duration').textContent = `${minutes}:${seconds}`;
+	});
+</script>
+
+
+
+

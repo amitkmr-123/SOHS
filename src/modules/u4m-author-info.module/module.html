@@ -1,0 +1,47 @@
+{% set moduleName = 'u4m-author-info' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+	<div class="author_info_wrap {% if module.module_settings.include_top_border %}topBorder
+							{% endif %} {% if module.module_settings.include_bottom_border %}bottomBorder
+							{% endif %}">
+		<div class="auth-img">
+			{% if module.use_post_author_info %}
+			<img alt="{{ content.blog_post_author.display_name }}" src="{{ content.blog_post_author.avatar }}">
+			{% else %}
+			{% if module.author_info.author_image.src %}
+			<img src="{{ module.author_info.author_image.src|escape_url }}" alt="{{ module.author_info.author_image.alt|escape_attr }}" >
+			{% endif %}
+			{% endif %}
+		</div>
+
+		<div class="auth_bio">
+			<{{ module.author_info.heading_size }} class="auth_title {{ module.module_overrides.select_heading_color ? module.module_overrides.select_heading_color|replace('_bg','_clr')~" headingColorAdded"  : "noHeadingColor" }}">
+				{% if module.use_post_author_info %}
+				{{ content.blog_post_author.display_name }}
+				{% else %}
+				{{ module.author_info.heading }}
+				{% endif %}
+				</{{ module.author_info.heading_size }}>
+
+				<div class="auth_bio_text {{ module.author_info.content_style }}">
+			{% if module.use_post_author_info %}
+			{{ content.blog_post_author.bio }}
+			{% else %}
+			{{ module.author_info.content }}
+			{% endif %}
+		</div>
+	</div>
+
+</div>
+
+
+</div>
+</section>
+
+
+
+
+
+

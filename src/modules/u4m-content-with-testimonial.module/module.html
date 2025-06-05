@@ -11,84 +11,27 @@
 			{% if module.include_top_title %}
 			<div class="top_content">
 				<{{ module.top_title_size }}>
-					{{ module.top_title }}
+				{{ module.top_title }}
 				</{{ module.top_title_size }}>
 			</div>
-			{% endif %}
+				{% endif %}
 
-			<div class="cards_list_row">
-				<div class="flex_row {% if module.card_group|length > 2%}moreCards{% endif %}">
+				<div class="cards_list_row">
+					<div class="flex_row {% if module.card_group|length > 2%}moreCards{% endif %}">
 
-					{% for item in module.card_group %}
-					{% set href = item.link.url.href %}
-					{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
-					{% set href = "mailto:" + href %}
-					{% endif %}
-					<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
-						<div class="card_item_inner ">
-							<div class="card_row">
-								{% if item.image.src %}
-								<div class="card_img" style="background-image: url({{ item.image.src }})">
-									<a
-										 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
-										 href="{{ href }}" 
-										 {% else %}
-										 href="{{ href }}"
-										 {% endif %}
-										 {% if item.link.open_in_new_tab %}
-										 target="_blank"
-										 {% endif %}
-										 {% if item.link.rel %}
-										 rel="{{ item.link.rel }}"
-										 {% endif %}
-										 ></a>
-								</div>
-								{% endif %}
-
-								<div class="card_body">
-									<div class="card_meta">
-										<div class="card_meta_tag">
-											{% if item.tag.select_icon_type %}
-											<span class="tag_icon ty{{item.tag.select_icon_type}}" {% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}style="color: {{ item.tag.icon_color.rgba }}"	{% endif %}>
-												{% if item.tag.select_icon_type == "image" and item.tag.image.src %}
-												<img src="{{ item.tag.image.src }}" alt="{{ item.tag.image.alt }}">
-												{% endif %}
-
-												{% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}
-												{% icon
-										name="{{ item.tag.icon_field.name }}"
-										style="{{ item.tag.icon_field.type }}"
-										unicode="{{ item.tag.icon_field.unicode }}"
-										icon_set="{{ item.tag.icon_field.icon_set }}"
-									%}
-												{% endif %}
-											</span>
-											{% endif %}
-
-											<span class="tag_name">
-												{{ item.tag.tag_name }}
-											</span>
-										</div>
-
-										{% if item.mark_podcast %}
-										<div class="podcast_mmark">
-											<span>
-												<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-													<g clip-path="url(#clip0_2001_985)">
-														<path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
-													<defs>
-														<clipPath id="clip0_2001_985">
-															<rect width="12" height="12" fill="white"/>
-														</clipPath>
-													</defs>
-												</svg>
-											</span>
-										</div>
-										{% endif %}
-									</div>
-
-									<h4 class="title">
-										<a {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+						{% if module.select_content_type == "custom" %}
+						{% for item in module.card_group %}
+						{% set href = item.link.url.href %}
+						{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+						{% set href = "mailto:" + href %}
+						{% endif %}
+						<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+							<div class="card_item_inner ">
+								<div class="card_row">
+									{% if item.image.src %}
+									<div class="card_img" style="background-image: url({{ item.image.src }})">
+										<a
+											 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
 											 href="{{ href }}" 
 											 {% else %}
 											 href="{{ href }}"
@@ -99,112 +42,271 @@
 											 {% if item.link.rel %}
 											 rel="{{ item.link.rel }}"
 											 {% endif %}
-											 >
-											{{ item.title }}
-										</a>
-									</h4>
-
-									{% if item.include_description %}
-									<div class="description">
-										{{ item.description }}
+											 ></a>
 									</div>
 									{% endif %}
 
+									<div class="card_body">
+										<div class="card_meta">
+											<div class="card_meta_tag">
+												{% if item.tag.select_icon_type %}
+												<span class="tag_icon ty{{item.tag.select_icon_type}}" {% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}style="color: {{ item.tag.icon_color.rgba }}"	{% endif %}>
+													{% if item.tag.select_icon_type == "image" and item.tag.image.src %}
+													<img src="{{ item.tag.image.src }}" alt="{{ item.tag.image.alt }}">
+													{% endif %}
 
-									{% if item.include_authors %}
-									<div class="authors_wrap">
-										{% for item2 in item.author_group %}
-										<div class="auth_item">
-											{% if item2.image.src %}
-											<span class="auth_img">
-												<img src="{{ item2.image.src }}" alt="{{ item2.image.alt }}">
-											</span>
-											{% endif %}
-											{% if item2.auth_info %}
-											<span class="author_info">
-												{{ item2.auth_info }}
-											</span>
+													{% if item.tag.select_icon_type == "icon" and item.tag.icon_field.name %}
+													{% icon
+										name="{{ item.tag.icon_field.name }}"
+										style="{{ item.tag.icon_field.type }}"
+										unicode="{{ item.tag.icon_field.unicode }}"
+										icon_set="{{ item.tag.icon_field.icon_set }}"
+									%}
+													{% endif %}
+												</span>
+												{% endif %}
+
+												<span class="tag_name">
+													{{ item.tag.tag_name }}
+												</span>
+											</div>
+
+											{% if item.mark_podcast %}
+											<div class="podcast_mmark">
+												<span>
+													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+														<g clip-path="url(#clip0_2001_985)">
+															<path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+														<defs>
+															<clipPath id="clip0_2001_985">
+																<rect width="12" height="12" fill="white"/>
+															</clipPath>
+														</defs>
+													</svg>
+												</span>
+											</div>
 											{% endif %}
 										</div>
-										{% endfor %}
-									</div>
-									{% endif %}
 
+										<h4 class="title">
+											<a {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+												 href="{{ href }}" 
+												 {% else %}
+												 href="{{ href }}"
+												 {% endif %}
+												 {% if item.link.open_in_new_tab %}
+												 target="_blank"
+												 {% endif %}
+												 {% if item.link.rel %}
+												 rel="{{ item.link.rel }}"
+												 {% endif %}
+												 >
+												{{ item.title }}
+											</a>
+										</h4>
+
+										{% if item.include_description %}
+										<div class="description">
+											{{ item.description }}
+										</div>
+										{% endif %}
+
+
+										{% if item.include_authors %}
+										<div class="authors_wrap">
+											{% for item2 in item.author_group %}
+											<div class="auth_item">
+												{% if item2.image.src %}
+												<span class="auth_img">
+													<img src="{{ item2.image.src }}" alt="{{ item2.image.alt }}">
+												</span>
+												{% endif %}
+												{% if item2.auth_info %}
+												<span class="author_info">
+													{{ item2.auth_info }}
+												</span>
+												{% endif %}
+											</div>
+											{% endfor %}
+										</div>
+										{% endif %}
+
+									</div>
 								</div>
 							</div>
 						</div>
+						{% endfor %}
+						{% endif %}
+						{# #}
+
+						{% if module.select_content_type == "hubdb" %}
+						{% set table = module.select_table  %}
+						{% set query = "orderBy=-hs_created_at"%}
+						{% set limit = "&limit=2"  %}
+						{% set rowData = hubdb_table_rows(table,query~limit) %}
+
+						{% for item in rowData %}
+						<div class="card_item {{ module.module_settings.select_columns_count_in_row }} {% cycle "odd","even"%} card{{loop.index}}">
+							<div class="card_item_inner ">
+								<a  href="{{ item.link }}"  class="overlay_link"></a>
+								<div class="card_row">
+									{% if item.image.url %}
+									<div class="card_img" style="background-image: url({{ item.image.url }})">
+									</div>
+									{% endif %}
+
+									<div class="card_body">
+										<div class="card_meta">
+											<div class="card_meta_tag">
+
+												<span class="tag_icon tyimage">
+													<img src="{{item.category_icon.url}}"/>
+												</span>
+												<span class="tag_name">
+													{{ item.category.label }}
+												</span>
+											</div>
+
+											{% if item.podcast_audio %}
+											<div class="podcast_mmark">
+												<span>
+													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+														<g clip-path="url(#clip0_2001_985)">
+															<path d="M8.25 0.75C10.125 1.875 11.25 3.75 11.25 6C11.25 8.25 10.125 10.125 8.25 11.25M7.5 3.75C9 4.875 9 7.125 7.5 8.25M0.75 3.75V8.25H2.25L5.25 11.25V0.75L2.25 3.75H0.75Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+														<defs>
+															<clipPath id="clip0_2001_985">
+																<rect width="12" height="12" fill="white"/>
+															</clipPath>
+														</defs>
+													</svg>
+												</span>
+											</div>
+											{% endif %}
+										</div>
+										<h4 class="title">
+											{{ item.name }}
+										</h4>
+										{% if loop.index == 3%}
+										<div class="authors_wrap">
+											<div class="auth_item">
+												{% if item.author_image.url %}
+												<span class="auth_img">
+													<img src="{{ item.author_image.url }}" alt="{{ item.author_name }}">
+												</span>
+												{% endif %}
+												<span class="author_info">
+													{{ item.author_name }} {{ item.author_role }}
+												</span>
+											</div>
+											<div class="auth_item">
+												{% if item.author_2_image.url %}
+												<span class="auth_img">
+													<img src="{{ item.author_2_image.url }}" alt="{{ item.author_2_name }}">
+												</span>
+												{% endif %}
+												<span class="author_info">
+													{{ item.author_2_name }} {{ item.author_2_role }}
+												</span>
+											</div>
+										</div>
+										{% else %}
+										<div class="description">
+											{{ item.description }}
+										</div>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+
+						{% endif %}
+						{# #}
 					</div>
-					{% endfor %}
-					{# #}
 				</div>
+
+				</div>
+
+				{% set quote_settings =	module.module_overrides.quote_background_settings %}
+
+				<div class="quote_box_wrapper">
+					<div class="quote_box_inner {{ quote_settings.select_color }} {% if module.module_overrides.quote_box_dark_theme %}quote-revrese-text{% endif %}">
+
+						<div class="quote_text">
+							<span>“</span>
+							{{ module.quote_box.quote }}
+						</div>
+
+						<div class="authors_wrap">
+							<div class="auth_item">
+								{% if module.quote_box.author_image.src %}
+								<span class="auth_img">
+									<img src="{{ module.quote_box.author_image.src }}" alt="{{ module.quote_box.author_image.alt }}">
+								</span>
+								{% endif %}
+								<span class="author_info">
+									<span>— {{ module.quote_box.auth_name }}</span>
+									<span>{{ module.quote_box.role }}</span>
+								</span>
+							</div>
+						</div>
+
+					</div>		
+				</div>
+
+
 			</div>
 
 		</div>
-
-		{% set quote_settings =	module.module_overrides.quote_background_settings %}
-
-		<div class="quote_box_wrapper">
-			<div class="quote_box_inner {{ quote_settings.select_color }} {% if module.module_overrides.quote_box_dark_theme %}quote-revrese-text{% endif %}">
-
-				<div class="quote_text">
-					<span>“</span>
-					{{ module.quote_box.quote }}
-				</div>
-
-				<div class="authors_wrap">
-					<div class="auth_item">
-						{% if module.quote_box.author_image.src %}
-						<span class="auth_img">
-							<img src="{{ module.quote_box.author_image.src }}" alt="{{ module.quote_box.author_image.alt }}">
-						</span>
-						{% endif %}
-						<span class="author_info">
-							<span>— {{ module.quote_box.auth_name }}</span>
-							<span>{{ module.quote_box.role }}</span>
-						</span>
-					</div>
-				</div>
-
-			</div>		
-		</div>
+		</section>
 
 
-	</div>
-
-</div>
-</section>
-
-
-{% require_css  %}
-<style>
-	{% if quote_settings.select_color == "custom"%}
-	.{{name}}	.quote_box_inner{
-		background-image: {{ quote_settings.custom_color.rgab }}
-	}
-	{% endif %}
-
-	{% if module.module_settings.change_outer_container_width %}
-	.{{name}}{
-		max-width: {{ module.module_settings.outer_container_width }}px;
-		width: 100%;
-		overflow: hidden
-	}
-
-
-	.{{name}} .page-center{
-		{% if module.module_settings.select_inner_container_position == "left"%}
-		margin-left: 0;
+	{% require_css  %}
+	<style>
+		{% if quote_settings.select_color == "custom"%}
+		.{{name}}	.quote_box_inner{
+			background-image: {{ quote_settings.custom_color.rgab }}
+		}
 		{% endif %}
-		{% if module.module_settings.select_inner_container_position == "right"%}
-		margin-right: 0;
+
+		{% if module.module_settings.change_outer_container_width %}
+		.{{name}}{
+			max-width: {{ module.module_settings.outer_container_width }}px;
+			width: 100%;
+			overflow: hidden
+		}
+
+
+		.{{name}} .page-center{
+			{% if module.module_settings.select_inner_container_position == "left"%}
+			margin-left: 0;
+			{% endif %}
+			{% if module.module_settings.select_inner_container_position == "right"%}
+			margin-right: 0;
+			{% endif %}
+		}
+
+
 		{% endif %}
-	}
+	</style>
+	{% end_require_css  %}
 
 
-	{% endif %}
-</style>
-{% end_require_css  %}
-
+	{% require_css %}
+	<style>
+		.{{name}}	.card_item_inner{
+			position: relative
+		}
+		.{{name}}	.overlay_link{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+	</style>
+	{% end_require_css %}
 
 
 

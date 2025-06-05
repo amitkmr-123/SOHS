@@ -1,0 +1,34 @@
+@import "../../css/_module-imports";
+
+.u4m-event-banner {
+  position: relative;
+
+  &.reverse-text {
+    .eventsbanner_content {
+      @include darkThemeStyle;
+    }
+  }
+
+  .eventsbanner_content {
+    .eyebrow_author,
+    .eyebrow_tex {
+      font-family: $font2;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+  }
+  .audio-player_wrapper {
+    margin-top: 63px;
+    .play-btn {
+      &.playBtn {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
