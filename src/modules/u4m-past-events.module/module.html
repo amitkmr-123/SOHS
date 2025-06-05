@@ -13,19 +13,25 @@
 
 {% set current_date_str = unixtimestamp(local_dt) %}
 {% set past_events = [] %}
+{% set upcoming_events = [] %}
+
 {% for row in rowData %}
 {% if row.date < current_date_str %}
 {% do past_events.append(row) %}
 {% endif %}
+{# {% if row.date > current_date_str %}
+{% do upcoming_events.append(row) %}
+{% endif %} #}
 {% endfor %}
 
-{% set past_events = past_events|sort(True, True, "date") %}
+{% set events_data = past_events|sort(True, True, "date") %}
+{# {% set events_data = upcoming_events|sort(False, False, "event_start_date") %} #}
 
 <div class="page-center {{ module.module_overrides.container_size }}" >
 	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
 	<div class="cards_list_row ">
-		<div class="flex_row {% if past_events|length > 2%}moreCards{% else %}lesscards{% endif %}">
-			{% for item in past_events %}
+		<div class="flex_row {% if events_data|length > 2%}moreCards{% else %}lesscards{% endif %}">
+			{% for item in events_data %}
 			<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
 				<div class="card_item_inner ">
 					<a  href="{{ item.link }}"  class="overlay_link"></a>

@@ -982,6 +982,19 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "center"
+  }, {
+    "id" : "3d9af366-4a58-8dfc-5497-69574561cfb8",
+    "name" : "card_theme_group",
+    "label" : "Card Theme Group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : { }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -989,7 +1002,8 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "intro_content_alignment" : "center"
+    "intro_content_alignment" : "center",
+    "card_theme_group" : { }
   }
 }, {
   "id" : "module_overrides",

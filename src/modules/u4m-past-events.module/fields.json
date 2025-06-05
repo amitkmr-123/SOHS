@@ -351,18 +351,6 @@
   "display_width" : null,
   "default" : 120529772
 }, {
-  "id" : "9f8b54eb-fe97-583b-213f-eb3188cb278e",
-  "name" : "post_count",
-  "label" : "Post Count",
-  "required" : false,
-  "locked" : false,
-  "display" : "text",
-  "max" : 4,
-  "step" : 1,
-  "type" : "number",
-  "display_width" : null,
-  "default" : 4
-}, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
   "name" : "module_settings",
   "label" : "Module Settings",

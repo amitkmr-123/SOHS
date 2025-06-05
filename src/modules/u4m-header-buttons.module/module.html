@@ -1,0 +1,48 @@
+<div class="u4m-header-buttons">
+	{% for item in module.button_group %}
+	<div class="innerCnt">
+		{% set href = item.link_field.url.href %}
+		{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+		{% endif %}
+		<a class="{{ item.button_theme }}"
+			 {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+			 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+			 {% else %}
+			 href="{{ href|escape_url }}"
+			 {% endif %}
+			 {% if item.link_field.open_in_new_tab %}
+			 target="_blank"
+			 {% endif %}
+			 {% if item.link_field.rel %}
+			 rel="{{ item.link_field.rel|escape_attr }}"
+			 {% endif %}
+			 >
+			<span>{{ item.text }}</span>
+			{% if item.icon_type == "image"%}
+			<span class="icon img">
+				{% if item.image.src %}
+				{% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}"' %}
+				{% if item.image.size_type == 'auto' %}
+				{% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% elif item.image.size_type == 'auto_custom_max' %}
+				{% set sizeAttrs = 'width="{{ item.image.max_width|escape_attr }}" height="{{ item.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% endif %}
+				{% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading|escape_attr }}"' : '' %}
+				<img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+				{% endif %}
+			</span>
+			{% elif item.icon_type == "icon"%}
+			<span class="icon">
+				{% icon
+		name="{{ item.icon_field.name }}"
+		style="{{ item.icon_field.type }}"
+		unicode="{{ item.icon_field.unicode }}"
+		icon_set="{{ item.icon_field.icon_set }}"
+	%}
+			</span>
+			{% endif %}
+		</a>
+	</div>
+	{% endfor %}
+</div>
