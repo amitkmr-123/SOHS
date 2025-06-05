@@ -760,25 +760,7 @@
         "alt" : null,
         "loading" : "lazy"
       }
-    }, {
-      "id" : "807e47d7-fe2c-b6a5-32d9-c98ca8c22f51",
-      "name" : "include_overlay",
-      "label" : "Include  Overlay",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "module_overrides.background_settings.background_type",
-        "controlling_value_regex" : "image",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "display" : "checkbox",
-      "type" : "boolean",
-      "display_width" : null,
-      "default" : false
-    }, {
+    },  {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
