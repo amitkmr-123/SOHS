@@ -432,7 +432,7 @@
         "alt" : null,
         "loading" : "lazy"
       }
-    },  {
+    }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
@@ -487,7 +487,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "custom_color" : {
         "color" : null,
         "opacity" : null
@@ -565,7 +564,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "custom_color" : {
         "color" : null,
         "opacity" : null

@@ -23,5 +23,12 @@
   }
   .audio-player_wrapper {
     margin-top: 63px;
+    .play-btn {
+      &.playBtn {
+        &:after {
+          display: none;
+        }
+      }
+    }
   }
 }
