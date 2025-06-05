@@ -415,7 +415,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "top-margin-none"
+    "default" : "top-margin-custom"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -434,7 +434,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 100
+    "default" : 30
   }, {
     "id" : "custom_top_margin_mobile",
     "name" : "custom_top_margin_mobile",
@@ -453,7 +453,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 50
+    "default" : 30
   }, {
     "id" : "module_overrides.bottom_margin",
     "name" : "bottom_margin",
@@ -847,9 +847,9 @@
   "display_width" : null,
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-none",
-    "custom_top_margin" : 100,
-    "custom_top_margin_mobile" : 50,
+    "top_margin" : "top-margin-custom",
+    "custom_top_margin" : 30,
+    "custom_top_margin_mobile" : 30,
     "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,

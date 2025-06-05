@@ -2,22 +2,24 @@
 
 @font-face {
   font-family: "Menlo";
-  src: url("{{ get_asset_url('../fonts/Menlo.eot') }}") format("eot"),
-  url("{{ get_asset_url('../fonts/Menlo.woff') }}") format("woff"),
-  url("{{ get_asset_url('../fonts/Menlo.woff2') }}") format("woff2"),
-  url("{{ get_asset_url('../fonts/Menlo.ttf') }}") format("ttf"),
-  url("{{ get_asset_url('../fonts/Menlo.svg') }}") format("svg");
+  src:
+    url("{{ get_asset_url('../fonts/Menlo.eot') }}") format("eot"),
+    url("{{ get_asset_url('../fonts/Menlo.woff') }}") format("woff"),
+    url("{{ get_asset_url('../fonts/Menlo.woff2') }}") format("woff2"),
+    url("{{ get_asset_url('../fonts/Menlo.ttf') }}") format("ttf"),
+    url("{{ get_asset_url('../fonts/Menlo.svg') }}") format("svg");
   font-style: normal;
   // font-weight: 400;
 }
 
 @font-face {
   font-family: "proximanova41";
-  src: url("{{ get_asset_url('../fonts/proximanova41.eot') }}") format("eot"),
-  url("{{ get_asset_url('../fonts/proximanova41.woff') }}") format("woff"),
-  url("{{ get_asset_url('../fonts/proximanova41.woff2') }}") format("woff2"),
-  url("{{ get_asset_url('../fonts/proximanova41.ttf') }}") format("ttf"),
-  url("{{ get_asset_url('../fonts/proximanova41.svg') }}") format("svg");
+  src:
+    url("{{ get_asset_url('../fonts/proximanova41.eot') }}") format("eot"),
+    url("{{ get_asset_url('../fonts/proximanova41.woff') }}") format("woff"),
+    url("{{ get_asset_url('../fonts/proximanova41.woff2') }}") format("woff2"),
+    url("{{ get_asset_url('../fonts/proximanova41.ttf') }}") format("ttf"),
+    url("{{ get_asset_url('../fonts/proximanova41.svg') }}") format("svg");
   font-style: normal;
 }
 
@@ -51,7 +53,7 @@ body {
 }
 
 .dnd_padd {
-  color: $black;
+  color: $charcoal;
 }
 
 body.lp-sign-up {
@@ -459,7 +461,7 @@ code {
   border-radius: 0;
 }
 
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -554,7 +556,7 @@ section[class*="u4m-"] {
   position: relative;
 }
 
-.bg_overlay~*:not(.bg_overlay) {
+.bg_overlay ~ *:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }
