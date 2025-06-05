@@ -370,6 +370,20 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "center"
+  }, {
+    "id" : "7367076e-f29e-a20b-9fc4-f121da71cd1a",
+    "name" : "select_columns_count_in_row",
+    "label" : "Select Columns Count in Row",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "one", "One" ], [ "two", "Two" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "two"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -377,7 +391,8 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "intro_content_alignment" : "center"
+    "intro_content_alignment" : "center",
+    "select_columns_count_in_row" : "two"
   }
 }, {
   "id" : "module_overrides",
@@ -727,7 +742,7 @@
         "alt" : null,
         "loading" : "lazy"
       }
-    },  {
+    }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
@@ -782,7 +797,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "custom_color" : {
         "color" : null,
         "opacity" : null
@@ -860,7 +874,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "custom_color" : {
         "color" : null,
         "opacity" : null

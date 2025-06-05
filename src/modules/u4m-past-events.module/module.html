@@ -29,10 +29,10 @@
 
 <div class="page-center {{ module.module_overrides.container_size }}" >
 	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
-	<div class="cards_list_row ">
+	<div class="cards_list_row {{ module.module_settings.select_columns_count_in_row }}_columnRow">
 		<div class="flex_row {% if events_data|length > 2%}moreCards{% else %}lesscards{% endif %}">
 			{% for item in events_data %}
-			<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+			<div class="card_item {{ module.module_settings.select_columns_count_in_row }} {% cycle "odd","even"%} card{{loop.index}}">
 				<div class="card_item_inner ">
 					<a  href="{{ item.link }}"  class="overlay_link"></a>
 					<div class="card_row">
@@ -110,8 +110,6 @@
 
 </div>
 </section>
-
-
 
 
 

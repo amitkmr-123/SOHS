@@ -342,6 +342,76 @@
     } ]
   }
 }, {
+  "id" : "6ef9a94e-9c09-ee63-3f75-66a132425d10",
+  "name" : "select_content_type",
+  "label" : "Select Content Type",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "hubdb", "HubDB" ], [ "custom", "Custom" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "custom"
+}, {
+  "id" : "4fc76b04-1f4b-aaa4-7904-669d22228d64",
+  "name" : "select_table",
+  "label" : "Select Table",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "select_content_type",
+    "controlling_value_regex" : "hubdb",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "type" : "hubdbtable",
+  "display_width" : null,
+  "default" : 120529772
+}, {
+  "id" : "e2bdc54c-3622-1ed9-bb3a-b96fdada9411",
+  "name" : "card_count",
+  "label" : "Cards Count",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "select_content_type",
+    "controlling_value_regex" : "hubdb",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 2
+}, {
+  "id" : "e31b32e2-a062-db69-bbab-a2cb1daa0241",
+  "name" : "link_text",
+  "label" : "Link Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "select_content_type",
+    "controlling_value_regex" : "hubdb",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "click to read this content"
+}, {
   "id" : "db54579f-5091-9ef4-9d52-f83b6e04d727",
   "name" : "card_group",
   "label" : "Card Group",
@@ -352,6 +422,14 @@
     "max" : 4,
     "sorting_label_field" : "7185180c-84c2-2a99-9957-ebd15149832a",
     "default" : 2
+  },
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "select_content_type",
+    "controlling_value_regex" : "custom",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
   },
   "children" : [ {
     "id" : "5081390b-6027-5b34-52c9-8a25ed745310",
