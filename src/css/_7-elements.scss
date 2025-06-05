@@ -42,13 +42,17 @@ body {
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
-  color: $black;
+  color: $white;
   font-weight: normal;
   background-color: $purple;
 
   &.hide-header {
     margin-top: 0;
   }
+}
+
+.dnd_padd {
+  color: $black;
 }
 
 body.lp-sign-up {
