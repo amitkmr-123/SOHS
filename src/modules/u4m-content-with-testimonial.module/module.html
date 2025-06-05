@@ -10,9 +10,9 @@
 		<div class="left_content_column">
 			{% if module.include_top_title %}
 			<div class="top_content">
-				<h3>
+				<{{ module.top_title_size }}>
 					{{ module.top_title }}
-				</h3>
+				</{{ module.top_title_size }}>
 			</div>
 			{% endif %}
 

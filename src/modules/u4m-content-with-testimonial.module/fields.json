@@ -372,6 +372,28 @@
   "display_width" : null,
   "default" : "Our Latest"
 }, {
+  "id" : "7fa5b882-521c-3168-2768-89f90182d7b5",
+  "name" : "top_title_size",
+  "label" : "Top Title Size",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "include_top_title",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : null
+  },
+  "display" : "select",
+  "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "h4"
+}, {
   "id" : "db54579f-5091-9ef4-9d52-f83b6e04d727",
   "name" : "card_group",
   "label" : "Card Group",
@@ -1367,7 +1389,7 @@
         "alt" : null,
         "loading" : "lazy"
       }
-    },  {
+    }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
       "label" : "Select Color",
@@ -1422,7 +1444,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "custom_color" : {
         "color" : null,
         "opacity" : null
@@ -1587,7 +1608,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "custom_color" : {
         "color" : null,
         "opacity" : null

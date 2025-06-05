@@ -132,8 +132,9 @@
 
     .quote_text {
       @include h1;
-
+      font-weight: 400;
       b {
+        font-weight: 800;
         font-style: italic;
         color: $SunbeamYellow;
       }
