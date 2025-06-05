@@ -980,16 +980,6 @@
       "type" : "choice",
       "display_width" : null,
       "default" : "lightblack_bg"
-    }, {
-      "id" : "2c1786b4-c021-4fda-3f2f-7bba56ab6483",
-      "name" : "dark_theme",
-      "label" : "Dark Theme",
-      "required" : false,
-      "locked" : false,
-      "display" : "checkbox",
-      "type" : "boolean",
-      "display_width" : null,
-      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -998,8 +988,7 @@
     "display_width" : null,
     "default" : {
       "icon_color" : "lightblack",
-      "select_bg" : "lightblack_bg",
-      "dark_theme" : true
+      "select_bg" : "lightblack_bg"
     }
   }, {
     "id" : "09b36d70-f03f-ef4d-0c6d-7c93505cbf4d",
@@ -1051,8 +1040,7 @@
     "intro_content_alignment" : "center",
     "right_column_content" : {
       "icon_color" : "lightblack",
-      "select_bg" : "lightblack_bg",
-      "dark_theme" : true
+      "select_bg" : "lightblack_bg"
     },
     "left_column_group" : {
       "select_bg" : "White_bg",

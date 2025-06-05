@@ -80,23 +80,63 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.querySelectorAll('.hdr .btm_content .flx .menu .hs-menu-wrapper > ul > li.hs-item-has-children > a').forEach(a => {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  svg.setAttribute("viewBox", "0 0 384 512");
-  svg.innerHTML = '<path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>';
-  a.appendChild(svg);
+	const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+	svg.setAttribute("viewBox", "0 0 384 512");
+	svg.innerHTML = '<path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>';
+	a.appendChild(svg);
 });
 
 document.querySelectorAll('.hdr .btm_content .flx .menu .hs-menu-wrapper > ul > li.hs-item-has-children > a > svg').forEach(svg => {
-  svg.addEventListener('click', function (e) {
+	svg.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		const li = svg.closest('li.hs-item-has-children');
+
+		svg.classList.toggle('active');
+
+		if (li) {
+			li.classList.toggle('active');
+		}
+	});
+});
+
+  // Store references to anchor elements
+  let menuLinks;
+
+  function handleMenuClick(e) {
     e.preventDefault();
 
-    const li = svg.closest('li.hs-item-has-children');
+    const parentLi = this.closest('li.hs-item-has-children');
+    const siblingLis = parentLi.parentElement.querySelectorAll('li.hs-item-has-children');
 
-    svg.classList.toggle('active');
+    siblingLis.forEach(li => {
+      if (li !== parentLi) li.classList.remove('desActive');
+    });
 
-    if (li) {
-      li.classList.toggle('active');
-    }
-  });
-});
+    parentLi.classList.toggle('desActive');
+  }
+
+  function bindOrUnbindMenuClicks() {
+    menuLinks = document.querySelectorAll(
+      '.hdr .btm_content .flx .menu .hs-menu-wrapper > ul > li.hs-item-has-children > a'
+    );
+
+    menuLinks.forEach(link => {
+      link.removeEventListener('click', handleMenuClick); // Remove first to avoid duplicates
+
+      if (window.innerWidth >= 1441) {
+        link.addEventListener('click', handleMenuClick);
+      } else {
+        // Optional: cleanup classes on smaller screens
+        const parentLi = link.closest('li.hs-item-has-children');
+        parentLi.classList.remove('desActive');
+      }
+    });
+  }
+
+  // Run on page load
+  window.addEventListener('DOMContentLoaded', bindOrUnbindMenuClicks);
+
+  // Run on resize
+  window.addEventListener('resize', bindOrUnbindMenuClicks);
