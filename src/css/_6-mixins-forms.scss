@@ -42,7 +42,7 @@
 
           label {
             color: red;
-            font-size: 18rem;
+            @include size16;
             text-align: center;
             padding: 10rem 0 0;
             margin: 20rem 0 0;
@@ -58,10 +58,13 @@
     .hs-form-field {
       > label {
         font-size: 12rem;
-        font-weight: bold;
         line-height: 1.2;
-        letter-spacing: 1rem;
         pointer-events: auto;
+        margin-bottom: 8rem;
+        color: $white;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
       }
     }
 
@@ -71,22 +74,25 @@
       input[type="tel"],
       input[type="email"] {
         border: 1rem solid transparent;
-        border-radius: 4rem;
-        margin-top: 2rem;
-        margin-bottom: 20rem;
-        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
+        border-radius: 8rem;
+        margin-top: 0;
+        margin-bottom: 30rem;
+        background-color: $lightblack;
         padding: 16rem;
+        line-height: 1.38;
+        @include size16;
         width: 100%;
         appearance: none;
-
+        border: none;
+        color: $charcoal;
+        outline: none;
         &.error,
         &.invalid {
           border: 1rem solid red;
         }
 
         &::placeholder {
-          color: rgba($gray3, 1);
+          color: rgba($white, 1);
         }
       }
 
@@ -97,36 +103,41 @@
 
       input select {
         border: 0;
-        border-radius: 4rem;
-        margin-top: 2rem;
-        margin-bottom: 20rem;
-        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
+        border-radius: 8rem;
+        margin-top: 0;
+        margin-bottom: 30rem;
+        // font-size: 18rem; // Note anything below 16rem will trigger the zoom feature on iOS
+        @include size16;
+        background-color: $lightblack;
+        padding: 16rem;
+        line-height: 1.38;
       }
 
       input[type="file"] {
-        font-size: 16rem;
+        // font-size: 18rem;
+        @include size16;
         font-family: $font1;
         background-color: transparent;
         position: relative;
         font-weight: bold;
         margin-bottom: 23rem;
+        line-height: 1.38;
       }
 
       select {
         appearance: none;
-        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
-          no-repeat;
+        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
         background-size: 13rem 8rem;
         background-position: 97% 51%;
         border: 0;
-        border-radius: 4rem;
-        margin-top: 2rem;
-        margin-bottom: 20rem;
-        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
+        border-radius: 8rem;
+        margin-top: 0;
+        margin-bottom: 30rem;
+        // font-size: 18rem; // Note anything below 16rem will trigger the zoom feature on iOS
+        @include size16;
         background-color: $white;
         padding: 16rem;
-        // Note anything below 16rem will trigger the zoom feature on iOS
+        line-height: 1.38;
       }
 
       & + .hs-error-msgs {
@@ -192,12 +203,13 @@
 
     textarea {
       border: 0;
-      border-radius: $border2;
-      margin-top: 3rem;
-      margin-bottom: 20rem;
+      border-radius: 8rem;
+      margin-top: 0rem;
+      margin-bottom: 30rem;
       min-height: 100rem;
-      font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
-      background-color: $white;
+      @include size16;
+      // font-size: 18rem; // Note anything below 16rem will trigger the zoom feature on iOS
+      background-color: $lightblack;
       width: 100%;
 
       &.invalid {

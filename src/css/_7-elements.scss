@@ -1,5 +1,27 @@
 @include remScalling;
 
+@font-face {
+  font-family: "Menlo";
+  src:
+    url("{{ get_asset_url('../fonts/Menlo.eot') }}") format("eot"),
+    url("{{ get_asset_url('../fonts/Menlo.woff') }}") format("woff"),
+    url("{{ get_asset_url('../fonts/Menlo.woff2') }}") format("woff2"),
+    url("{{ get_asset_url('../fonts/Menlo.ttf') }}") format("ttf"),
+    url("{{ get_asset_url('../fonts/Menlo.svg') }}") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proximanova41";
+  src:
+    url("{{ get_asset_url('../fonts/proximanova41.eot') }}") format("eot"),
+    url("{{ get_asset_url('../fonts/proximanova41.woff') }}") format("woff"),
+    url("{{ get_asset_url('../fonts/proximanova41.woff2') }}") format("woff2"),
+    url("{{ get_asset_url('../fonts/proximanova41.ttf') }}") format("ttf"),
+    url("{{ get_asset_url('../fonts/proximanova41.svg') }}") format("svg");
+  font-style: normal;
+}
+
 // * {
 //   border: 1px solid red;
 // }
@@ -355,6 +377,11 @@ button {
 /* Forms */
 form {
   margin-bottom: 30rem;
+  // @include from;
+}
+
+.form-title:empty {
+  display: none;
 }
 
 ::-webkit-input-placeholder {

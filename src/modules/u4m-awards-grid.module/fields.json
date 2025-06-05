@@ -474,7 +474,7 @@
         "preset" : null,
         "type" : "choice",
         "display_width" : null,
-        "default" : "h2"
+        "default" : "h3"
       }, {
         "id" : "bc69178a-e068-cf08-510d-0b77fde3547a",
         "name" : "heading",
@@ -554,7 +554,7 @@
       "display_width" : null,
       "default" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",
@@ -645,7 +645,7 @@
       },
       "content_section" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",
@@ -800,7 +800,7 @@
       },
       "content_section" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",
@@ -839,7 +839,7 @@
       },
       "content_section" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",
@@ -888,7 +888,7 @@
       },
       "content_section" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",
@@ -949,7 +949,7 @@
       },
       "content_section" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",
@@ -1031,7 +1031,7 @@
       },
       "content_section" : {
         "tag" : "Winner",
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Awards Headline",
         "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at urna sem. Nunc lacinia nunc eget consectetur aliquam. In porta, elit posuere fringilla molestie, enim dui porta ante, sit amet pretium purus nisi sed nisi. Praesent consequat dictum lobortis. Sed vel iaculis sapien. In id laoreet velit.</p>",
         "content_style" : "bodystyle1",

@@ -225,7 +225,7 @@
         "show_emoji_picker" : false,
         "type" : "text",
         "display_width" : null,
-        "default" : "Headline above the form goes here."
+        "default" : "The state <span>of</span> hubspot"
       }, {
         "id" : "8bd8b179-cff9-d459-9126-6a450f833b21",
         "name" : "content",
@@ -284,7 +284,7 @@
           "max_width" : 240,
           "max_height" : 33
         },
-        "heading" : "Headline above the form goes here.",
+        "heading" : "The state <span>of</span> hubspot",
         "content" : "<h4>Headline above the form goes here.</h4>",
         "select_form" : {
           "response_type" : "inline",
@@ -332,7 +332,7 @@
           "max_width" : 240,
           "max_height" : 33
         },
-        "heading" : "Headline above the form goes here.",
+        "heading" : "The state <span>of</span> hubspot",
         "content" : "<h4>Headline above the form goes here.</h4>",
         "select_form" : {
           "response_type" : "inline",
@@ -386,7 +386,7 @@
           "max_width" : 240,
           "max_height" : 33
         },
-        "heading" : "Headline above the form goes here.",
+        "heading" : "The state <span>of</span> hubspot",
         "content" : "<h4>Headline above the form goes here.</h4>",
         "select_form" : {
           "response_type" : "inline",
