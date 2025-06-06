@@ -481,13 +481,13 @@
     "display_width" : null,
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
-      "alt" : "Frame 32",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/card-imge-large.png",
+      "alt" : "card-imge-large",
       "loading" : "lazy",
-      "width" : 446,
-      "height" : 446,
-      "max_width" : 446,
-      "max_height" : 446
+      "width" : 1374,
+      "height" : 734,
+      "max_width" : 1374,
+      "max_height" : 734
     }
   }, {
     "id" : "7185180c-84c2-2a99-9957-ebd15149832a",
@@ -817,13 +817,13 @@
     },
     "image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
-      "alt" : "Frame 32",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/card-imge-large.png",
+      "alt" : "card-imge-large",
       "loading" : "lazy",
-      "width" : 446,
-      "height" : 446,
-      "max_width" : 446,
-      "max_height" : 446
+      "width" : 1374,
+      "height" : 734,
+      "max_width" : 1374,
+      "max_height" : 734
     },
     "title" : "Lorem Ipsum Two Line Title Here.",
     "include_description" : true,
@@ -875,13 +875,13 @@
     },
     "image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/Frame%2032.png",
-      "alt" : "Frame 32",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/SOHS-u4m/images/card-imge-large.png",
+      "alt" : "card-imge-large",
       "loading" : "lazy",
-      "width" : 446,
-      "height" : 446,
-      "max_width" : 446,
-      "max_height" : 446
+      "width" : 1374,
+      "height" : 734,
+      "max_width" : 1374,
+      "max_height" : 734
     },
     "title" : "Lorem Ipsum Two Line Title Here.",
     "include_description" : true,
@@ -1442,7 +1442,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "custom"
+    "default" : "theme"
   }, {
     "id" : "2106c911-74cd-42f1-af9c-4ef05f436c77",
     "name" : "custom_container_size",
@@ -1499,7 +1499,7 @@
         "opacity" : null
       }
     },
-    "container_size" : "custom",
+    "container_size" : "theme",
     "custom_container_size" : 1440
   }
 } ]

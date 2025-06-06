@@ -83,7 +83,9 @@
     "icon_set" : "fontawesome-6.4.2",
     "type" : "icon",
     "display_width" : null,
-    "default" : { }
+    "default" : {
+      "name" : ""
+    }
   }, {
     "id" : "482ad2b6-afda-ea4e-1321-1a21fde5fc21",
     "name" : "text",

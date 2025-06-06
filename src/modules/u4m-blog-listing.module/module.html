@@ -1,0 +1,69 @@
+{% set moduleName = 'u4m-blog-listing' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center {{ module.module_overrides.container_size }}" >
+
+
+
+	<div class="cards_list">
+		<div class="flex_row">
+
+			{% for content in contents %}
+			<div class="card_item {% cycle "odd","even"%} card{{loop.index}}">
+				<div class="card_item_inner ">
+					<div class="card_row {{ module.module_settings.card_theme_group.background_color }} {% if module.module_settings.card_theme_group.dark_theme %}lightCnt{% endif %}">
+						<a  href="{{ content.absolute_url}}"  class="overlayLink"></a>
+						{% if content.post_list_summary_featured_image %}
+						<div class="card_img" style="background-image: url({{ content.post_list_summary_featured_image }})">
+						</div>
+						{% endif %}
+
+						<div class="card_body">
+							<div class="topCntt">
+								<div class="card_meta">
+									{% if content.topic_list %}
+									<div class="card_meta_tag">
+										{% for topic in content.topic_list %}
+										{% if loop.first%}
+										<span class="tag_name">
+											{{ topic.name }}
+										</span>
+										{% endif %}
+										{% endfor %}
+									</div>
+									{% endif %}
+								</div>
+								<h4 class="title">
+									{{ content.name }}
+								</h4>
+
+								<div class="description">
+									{{ content.post_list_content|striptags|truncatehtml(100, '..' , false) }}
+								</div>
+							</div>
+
+							<div class="btmCnt">
+								<div class="btn_item">
+									<a class="hs-arrow-btn " href="{{content.absolute_url}}">
+										<span>{{ module.link_text }}</span> <span>→</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{# #}
+		</div>
+	</div>
+
+</div>
+</section>
+
+
+
+
+
+
+

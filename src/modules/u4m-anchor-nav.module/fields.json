@@ -912,7 +912,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
@@ -1201,7 +1200,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "custom"
+    "default" : "theme"
   }, {
     "id" : "2106c911-74cd-42f1-af9c-4ef05f436c77",
     "name" : "custom_container_size",
@@ -1252,7 +1251,6 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false,
       "select_color" : "lightblack_bg",
       "custom_color" : {
         "color" : null,
@@ -1282,7 +1280,7 @@
         }
       }
     },
-    "container_size" : "custom",
+    "container_size" : "theme",
     "custom_container_size" : 1447
   }
 } ]
